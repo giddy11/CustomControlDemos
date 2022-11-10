@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WpfCustomControlLibrary1\WpfCustomControlLibrary1.csproj" />
+    <ProjectReference Include="..\WpfCustomControlLibrary2\WpfCustomControlLibrary2.csproj" />
   </ItemGroup>
 
 </Project>
