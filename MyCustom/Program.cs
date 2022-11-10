@@ -8,9 +8,9 @@ var v2 = new MyVector(10, 20);
 
 var result = MyVector.Add(v1, v2);
 var crossProduct = MyVector.CrossProduct(v1, v2);
- var len = v1.LengthOfVector;
+var subtraction = MyVector.Subtract(v1, v2);
 
-Console.WriteLine(crossProduct);
+Console.WriteLine(subtraction);
 
 
 Console.ReadLine();

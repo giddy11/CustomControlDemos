@@ -42,6 +42,14 @@ namespace MyCustom
             return additionOfTwoVectors;
         }
 
+        public static MyVector Subtract(MyVector myVector1, MyVector myVector2)
+        {
+            var xAxis = myVector1.X - myVector2.X;
+            var yAxis = myVector1.Y - myVector2.Y;
+            var subtractionOfTwoVectors = new MyVector(xAxis, yAxis);
+            return subtractionOfTwoVectors;
+        }
+
 
         public static double CrossProduct(MyVector myVector1, MyVector myVector2)
         {
