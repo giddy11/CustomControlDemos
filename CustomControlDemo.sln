@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomControlDemo", "Custom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCustomControlLibrary1", "WpfCustomControlLibrary1\WpfCustomControlLibrary1.csproj", "{FBC7FAA7-0DDB-426E-93B3-6FB7E2D339BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCustomControlLibrary2", "WpfCustomControlLibrary2\WpfCustomControlLibrary2.csproj", "{54207441-BCE7-4365-AE77-743A3951A92B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCustomControlLibrary2", "WpfCustomControlLibrary2\WpfCustomControlLibrary2.csproj", "{54207441-BCE7-4365-AE77-743A3951A92B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomClass", "CustomClass\CustomClass.csproj", "{C41CB6A1-F15B-4495-A609-BA5BB19CAF32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCustomClasses", "MyCustomClasses\MyCustomClasses.csproj", "{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustomClasses", "MyCustomClasses\MyCustomClasses.csproj", "{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustom", "MyCustom\MyCustom.csproj", "{47D63EB2-FA0D-477D-B3FA-C5F5D4572075}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{54207441-BCE7-4365-AE77-743A3951A92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54207441-BCE7-4365-AE77-743A3951A92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54207441-BCE7-4365-AE77-743A3951A92B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C41CB6A1-F15B-4495-A609-BA5BB19CAF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C41CB6A1-F15B-4495-A609-BA5BB19CAF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C41CB6A1-F15B-4495-A609-BA5BB19CAF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C41CB6A1-F15B-4495-A609-BA5BB19CAF32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F8A3F23-640D-46F7-B4BB-5808E7B4A9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D63EB2-FA0D-477D-B3FA-C5F5D4572075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D63EB2-FA0D-477D-B3FA-C5F5D4572075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D63EB2-FA0D-477D-B3FA-C5F5D4572075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D63EB2-FA0D-477D-B3FA-C5F5D4572075}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

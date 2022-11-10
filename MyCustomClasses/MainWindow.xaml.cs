@@ -25,6 +25,6 @@ namespace MyCustomClasses
             InitializeComponent();
         }
 
-        Vector
+        //Vector
     }
 }
