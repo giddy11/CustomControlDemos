@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace CustomClass
 {
     public class MyVector
     {
+
         public MyVector()
         {
             //X = 0;
@@ -20,7 +22,7 @@ namespace CustomClass
             Y = y;
         }
 
-        public double GetLength()
+        private double GetLengthOfVector()
         {
             double squaredElement = (X * X) + (Y * Y);
             double length = Math.Sqrt(squaredElement);
@@ -34,5 +36,12 @@ namespace CustomClass
 
         public double X { get; set; }
         public double Y { get; set; }
+        public double LengthOfVector
+        {
+            get 
+            { 
+                return GetLengthOfVector();
+            }
+        }
     }
 }
