@@ -8,6 +8,7 @@ namespace MyCustom
 {
     public class MyVector
     {
+        private object crossProduct;
 
         public MyVector()
         {
@@ -19,6 +20,11 @@ namespace MyCustom
         {
             X = x;
             Y = y;
+        }
+
+        public MyVector(object crossProduct)
+        {
+            this.crossProduct = crossProduct;
         }
 
         private double GetLengthOfVector()
@@ -34,6 +40,15 @@ namespace MyCustom
             var yAxis = myVector1.Y + myVector2.Y;
             var additionOfTwoVectors = new MyVector(xAxis, yAxis);
             return additionOfTwoVectors;
+        }
+
+
+        public static double CrossProduct(MyVector myVector1, MyVector myVector2)
+        {
+            var cross1 = myVector1.X * myVector2.Y;
+            var cross2 = myVector1.Y * myVector2.X;
+            var crossProduct = cross1 - cross2;
+            return crossProduct;
         }
 
 

@@ -3,12 +3,14 @@ using MyCustom;
 
 Console.WriteLine("Hello, World!");
 
-var v1 = new MyVector(1, 5);
-var v2 = new MyVector(1, 5);
+var v1 = new MyVector(20, 10);
+var v2 = new MyVector(10, 20);
 
 var result = MyVector.Add(v1, v2);
+var crossProduct = MyVector.CrossProduct(v1, v2);
+ var len = v1.LengthOfVector;
 
-Console.WriteLine(result);
+Console.WriteLine(crossProduct);
 
 
 Console.ReadLine();
