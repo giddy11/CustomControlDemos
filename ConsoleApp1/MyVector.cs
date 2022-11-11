@@ -123,20 +123,7 @@ public struct MyVector
         return $"[{XCordinates}, {YCordinates}]";
     }
 
-
-
-
     #region Properties
-    public static MyVector XAxis
-    {
-        get => new MyVector(1, 0);
-    }
-
-    public static MyVector YAxis
-    {
-        get => new MyVector(0, 1);
-    }
-
     public double XCordinates { get; set; }
     public double YCordinates { get; set; }
     public double LengthOfVector
@@ -147,19 +134,4 @@ public struct MyVector
         }
     } 
     #endregion
-
-
-
-
-
-
-
-
-    //public static MyVector XAxis
-    //{
-    //    get
-    //    {
-    //        return new MyVector(1, 0);
-    //    }
-    //}
 }
