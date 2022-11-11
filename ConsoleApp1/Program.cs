@@ -36,7 +36,7 @@ v2.Normalize();
 //var crossProduct = MyVector.CrossProduct(v1, v2);
 //var subtraction = MyVector.Subtract(v1, v2);
 
-Console.WriteLine(v2);
+Console.WriteLine(v9);
 
 
 Console.ReadLine();

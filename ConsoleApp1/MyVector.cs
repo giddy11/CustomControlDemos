@@ -29,7 +29,7 @@ public struct MyVector
         return additionOfTwoVectors;
     }
 
-    public static MyVector operator +(MyVector a, MyVector b)
+    public static MyVector operator + (MyVector a, MyVector b)
     {
         return MyVector.Add(a, b);
     }
@@ -57,7 +57,7 @@ public struct MyVector
         double product = Multiply(myVector1, myVector2);
         double magnitude = myVector1.LengthOfVector * myVector2.LengthOfVector;
         double divide = product / magnitude;
-        double angle = Math.Acos(divide);
+        double angle = Math.Acos(divide) / (Math.PI / 180);
         return angle;
     } 
     #endregion

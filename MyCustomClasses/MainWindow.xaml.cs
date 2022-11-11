@@ -26,6 +26,6 @@ namespace MyCustomClasses
         }
 
         //Vector
-        //Matrix
+        Matrix
     }
 }
