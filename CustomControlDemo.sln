@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCustomClasses", "MyCustom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C8C37647-30A8-4D52-81FF-B50C35D9ADD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructAndClass", "StructAndClass\StructAndClass.csproj", "{759247FA-1482-4A67-9B42-89F53E8DA289}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C8C37647-30A8-4D52-81FF-B50C35D9ADD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8C37647-30A8-4D52-81FF-B50C35D9ADD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8C37647-30A8-4D52-81FF-B50C35D9ADD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759247FA-1482-4A67-9B42-89F53E8DA289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759247FA-1482-4A67-9B42-89F53E8DA289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759247FA-1482-4A67-9B42-89F53E8DA289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759247FA-1482-4A67-9B42-89F53E8DA289}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
