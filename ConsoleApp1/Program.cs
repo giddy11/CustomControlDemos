@@ -2,10 +2,12 @@
 
 
 
-Console.WriteLine("Hello, World!");
+#region MyVector 
+using ConsoleApp1;
 
 var v1 = new MyVector(20, 10);
 var v2 = new MyVector(10, 20);
+
 
 var vec1 = new MyVector();
 
@@ -36,7 +38,29 @@ v2.Normalize();
 //var crossProduct = MyVector.CrossProduct(v1, v2);
 //var subtraction = MyVector.Subtract(v1, v2);
 
-Console.WriteLine(v9);
+//Console.WriteLine(v9); 
+#endregion
+
+
+var matrix1 = new MyMatrix();
+var matrix2 = new MyMatrix();
+
+matrix1.M11 = 1;
+matrix1.M12 = 12;
+matrix1.M21 = 21;
+matrix1.M22 = 11;
+matrix1.OffsetX = 13;
+matrix1.OffsetY = 14;
+
+matrix2.M11 = 1;
+matrix2.M12 = 12;
+matrix2.M21 = 21;
+matrix2.M22 = 11;
+matrix2.OffsetX = 13;
+matrix2.OffsetY = 14;
+
+
+
 
 
 Console.ReadLine();
