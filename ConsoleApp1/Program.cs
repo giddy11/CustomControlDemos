@@ -46,6 +46,8 @@ using ConsoleApp1;
 
 var matrix1 = new MyMatrix(1,2,3,4,5,2);
 var matrix2 = new MyMatrix(1,2,4,5,7,2);
+var matrix3 = new MyMatrix(1,2,3,4,0,1);
+matrix3.Scale(1, 0.5);
 
 var multiply = new MyMatrix();
 multiply.Multiply(matrix1, matrix2);

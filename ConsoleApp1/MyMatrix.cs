@@ -29,6 +29,13 @@
             return matrix;
         }
 
+        public MyMatrix Scale (double scaleX, double scaleY)
+        {
+            var scaleVector = new MyMatrix(scaleX, 0, 0, scaleY, 0, 0);
+            var matrix = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
+            return Multiply(matrix, scaleVector);
+        }
+
         //public double Determinant { get; }
         //public bool HasInverse { get; }
         //public bool IsIdentity { get; }
