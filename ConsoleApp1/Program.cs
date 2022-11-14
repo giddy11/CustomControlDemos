@@ -3,31 +3,31 @@
 
 
 #region MyVector 
-using ConsoleApp1;
+//using ConsoleApp1;
 
-var v1 = new MyVector(20, 10);
-var v2 = new MyVector(10, 20);
-
-
-var vec1 = new MyVector();
-
-vec1.XCordinates = 2;
-vec1.YCordinates = 2;
+//var v1 = new MyVector(20, 10);
+//var v2 = new MyVector(10, 20);
 
 
-//var v8 = new MyVector();
-var v9 = MyVector.AngleBetween(v1, v2);
+//var vec1 = new MyVector();
 
-//v1.ScalarDivision(2);
+//vec1.XCordinates = 2;
+//vec1.YCordinates = 2;
 
-var v10 = v1 / 2;
 
-//var v3 = new MyVector();
-//var v4 = new MyVector();
+////var v8 = new MyVector();
+//var v9 = MyVector.AngleBetween(v1, v2);
 
-//MyVector v6 = 2 * v1;
+////v1.ScalarDivision(2);
 
-v2.Normalize();
+//var v10 = v1 / 2;
+
+////var v3 = new MyVector();
+////var v4 = new MyVector();
+
+////MyVector v6 = 2 * v1;
+
+//v2.Normalize();
 
 //v3.XCordinates = 2;
 //v4.XCordinates = 3;
@@ -42,25 +42,15 @@ v2.Normalize();
 #endregion
 
 
-var matrix1 = new MyMatrix();
-var matrix2 = new MyMatrix();
+using ConsoleApp1;
 
-matrix1.M11 = 1;
-matrix1.M12 = 12;
-matrix1.M21 = 21;
-matrix1.M22 = 11;
-matrix1.OffsetX = 13;
-matrix1.OffsetY = 14;
+var matrix1 = new MyMatrix(1,2,3,4,5,2);
+var matrix2 = new MyMatrix(1,2,4,5,7,2);
 
-matrix2.M11 = 1;
-matrix2.M12 = 12;
-matrix2.M21 = 21;
-matrix2.M22 = 11;
-matrix2.OffsetX = 13;
-matrix2.OffsetY = 14;
+var multiply = new MyMatrix();
+multiply.Multiply(matrix1, matrix2);
 
 
-
-
+Console.WriteLine(multiply);
 
 Console.ReadLine();
