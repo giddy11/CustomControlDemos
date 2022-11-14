@@ -49,22 +49,17 @@ var matrix1 = new MyMatrix(1,2,3,4,0,1);
 var matrix2 = new MyMatrix(0,1,2,1,0,1);
 var matrix3 = new MyMatrix(1, 2, 3, 4, 0, 1);
 var matrix4 = new MyMatrix(0,0,0,0,0,0);
-var matrix8 = accesor.Rotate(45);
+var matrixInv = new MyMatrix(1, 2, 3, 4, 0, 0);
 
 
-var matrix6 = accesor.Scale(1, 0.5);
-var matrix7 = accesor.Translate(1, 0.5);
 
-
-var result = accesor.ScaleAt(matrix6, matrix3);
-var result1 = accesor.TranslateAt(matrix7, matrix3);
-var result2 = accesor.RotateAt(matrix8, matrix3);
+var result3 = accesor.MatrixInvert(matrixInv);
 
 //var multiply = new MyMatrix();
 //multiply.Multiply(matrix3, matrix5);
 //multiply.Scale()
 
 
-Console.WriteLine(result1);
+//Console.WriteLine(result1);
 
 Console.ReadLine();

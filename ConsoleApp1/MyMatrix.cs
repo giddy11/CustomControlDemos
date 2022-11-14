@@ -29,27 +29,27 @@
             return matrix;
         }
 
-        public MyMatrix ScaleAt (MyMatrix matrix1, MyMatrix matrix2)
+        public MyMatrix ScaleAt (MyMatrix matrix1)
         {
-            //return Multiply(matrix1, matrix2);
+            var matrix2 = new MyMatrix(1, 0, 0, 0.5, 0, 0);
             return matrix1 * matrix2;
         }
 
-        public MyMatrix Scale(double scaleX, double scaleY)
+        public MyMatrix ScalePrepend(MyMatrix matrix1)
         {
-            var scaleMatrix = new MyMatrix(scaleX, 0, 0, scaleY, 0, 0);
-            return scaleMatrix;
+            var matrix2 = new MyMatrix(1, 0, 0, 0.5, 0, 0);
+            return matrix2 * matrix1;
         }
 
-        public MyMatrix Translate (double dx, double dy)
+        public MyMatrix TranslatePrepend (MyMatrix matrix1)
         {
-            var translateMatrix = new MyMatrix(1, 0, 0, 1, dx, dy);
-            return translateMatrix;
+            var matrix2 = new MyMatrix(1, 0, 0, 1, 1, 0.5);
+            return matrix2 * matrix1;
         }
 
-        public MyMatrix TranslateAt(MyMatrix matrix1, MyMatrix matrix2)
+        public MyMatrix TranslateAt(MyMatrix matrix1)
         {
-            //return ScaleAt(matrix1, matrix2);
+            var matrix2 = new MyMatrix(1, 0, 0, 1, 1, 0.5);
             return matrix1 * matrix2;
         }
 
@@ -60,17 +60,78 @@
             return multiply;
         }
 
-        public MyMatrix Rotate(double angle)
+        public MyMatrix RotatePrepend(double angle, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
-            return rotateAngle;
+            return rotateAngle * matrix1;
         }
 
-        public MyMatrix RotateAt(MyMatrix matrix1, MyMatrix matrix2)
+        public MyMatrix RotatePrepend(double angle, double x, double y, MyMatrix matrix1)
         {
-            return matrix1 * matrix2;
+            angle = angle * Math.PI / 180;
+            var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), x, y);
+            return rotateAngle * matrix1;
         }
+
+        public MyMatrix RotateAt(double angle, double x, double y, MyMatrix matrix1)
+        {
+            angle = angle * Math.PI / 180;
+            var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), x, y);
+            return matrix1 * rotateAngle;
+        }
+
+        public MyMatrix SkewAt(double angleX, double angleY, MyMatrix matrix1)
+        {
+            angleX = angleX * Math.PI / 180;
+            angleY = angleY * Math.PI / 180;
+            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, 0, 0);
+            return matrix1 * skewAngle;
+        }
+
+        public MyMatrix SkewPrepend(double angleX, double angleY, MyMatrix matrix1)
+        {
+            angleX = angleX * Math.PI / 180;
+            angleY = angleY * Math.PI / 180;
+            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, 0, 0);
+            return skewAngle * matrix1;
+        }
+
+        public MyMatrix MatrixInvert(MyMatrix matrix2)
+        {
+            var matrix1 = new MyMatrix(-2, 1, 1.5, -0.5, 0, 0);
+            var matricInvert = matrix2 * matrix1;
+            return matricInvert;
+        }
+
+        public static double[,] TransformMatrixToArray(MyMatrix matrix)
+        {
+            double[,] arrayMatrix = new double[3, 3];
+
+            arrayMatrix[0, 0] = matrix.M11;
+            arrayMatrix[1, 0] = matrix.M21;
+            arrayMatrix[2, 0] = matrix.OffsetX;
+
+            arrayMatrix[0, 1] = matrix.M12;
+            arrayMatrix[1, 1] = matrix.M22;
+            arrayMatrix[2, 1] = matrix.OffsetY;
+
+            arrayMatrix[0, 2] = 0;
+            arrayMatrix[1, 2] = 0;
+            arrayMatrix[2, 2] = 1;
+
+
+            return arrayMatrix;
+
+        }
+
+        public static MyMatrix TransformArrayToMatrix(double[,] arr)
+        {
+            return new MyMatrix(arr[0, 0], arr[0, 1], arr[1, 0], arr[1, 1], arr[2, 0], arr[2, 1]);
+        }
+
+
+
 
 
         //public double Determinant { get; }
