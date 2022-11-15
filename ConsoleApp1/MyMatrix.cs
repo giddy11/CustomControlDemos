@@ -106,24 +106,23 @@
             angleY = angleY * Math.PI / 180;
             var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, 0, 0);
             return skewAngle * matrix1;
-        } 
+        }
         #endregion
 
         public MyMatrix MatrixInvert()
         {
             var determinant = DeterminantOfMatrix();
 
-            var a11 = M11;
-            var a12 = M12;
-            var a21 = M21;
-            var a22 = M22;
-            var ax = OffsetX;
-            var ay = OffsetY;
+            var a11 = M11 / determinant;
+            var a12 = M12 / determinant;
+            var a21 = M21 / determinant;
+            var a22 = M22 / determinant;
+            var ax = OffsetX / determinant;
+            var ay = OffsetY / determinant;
 
-            var matrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
+            var newMatrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
 
-
-            //return matrix / determinant;
+            return newMatrix;
         }
 
         #region Transformation
@@ -156,17 +155,7 @@
 
         public double DeterminantOfMatrix()
         {
-            var a11 = M11;
-            var a12 = M12;
-            var a21 = M21;
-            var a22 = M22;
-            var ax = OffsetX;
-            var ay = OffsetY;
-            var matrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
-
-            var determinant = (a11 * a22) - (a12 * a21);
-
-
+            var determinant = (M11 * M22) - (M12 * M21);
             return determinant;
         }
 
