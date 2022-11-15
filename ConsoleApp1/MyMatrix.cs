@@ -32,29 +32,33 @@
         #endregion
 
         #region Scale
-        public MyMatrix ScaleAt(MyMatrix matrix1)
+        public MyMatrix ScaleAt(MyMatrix matrix1, double x, double y)
         {
-            var matrix2 = new MyMatrix(1, 0, 0, 0.5, 0, 0);
+            var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
             return matrix1 * matrix2;
         }
 
-        public MyMatrix ScalePrepend(MyMatrix matrix1)
+        public MyMatrix ScalePrepend(MyMatrix matrix1, double x, double y)
         {
-            var matrix2 = new MyMatrix(1, 0, 0, 0.5, 0, 0);
+            var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
             return matrix2 * matrix1;
         }
         #endregion
 
         #region Translation
-        public MyMatrix TranslatePrepend(MyMatrix matrix1)
+        public MyMatrix TranslatePrepend(MyMatrix matrix1, double dx, double dy)
         {
-            var matrix2 = new MyMatrix(1, 0, 0, 1, 1, 0.5);
+            OffsetX += dx;
+            OffsetY += dy;
+            var matrix2 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
             return matrix2 * matrix1;
         }
 
-        public MyMatrix TranslateAt(MyMatrix matrix1)
+        public MyMatrix TranslateAt(MyMatrix matrix1, double dx, double dy)
         {
-            var matrix2 = new MyMatrix(1, 0, 0, 1, 1, 0.5);
+            OffsetX += dx;
+            OffsetY += dy;
+            var matrix2 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
             return matrix1 * matrix2;
         }
         #endregion
@@ -66,6 +70,14 @@
             var multiply = Multiply(matrix1, matrix2);
             return multiply;
         }
+
+        //public static bool operator == (MyMatrix matrix1, MyMatrix matrix2)
+        //{
+
+        //    return matrix1.OffsetX == matrix2.OffsetX;
+
+            
+        //}
         #endregion
 
         #region Rotation
@@ -159,7 +171,18 @@
             return determinant;
         }
 
+        
+        //private bool IsMatrixIdentity()
+        //{
+        //    MyMatrix matrix2 = new MyMatrix(1, 0, 0, 1, 0, 0);
+        //    var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
 
+        //    if (matrix2 == matrix1)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
 
 
@@ -172,7 +195,14 @@
                 
         }
         //public bool HasInverse { get; }
-        //public bool IsIdentity { get; }
+        //public bool IsIdentity
+        //{
+        //    get
+        //    {
+        //        return IsMatrixIdentity();
+        //    }
+        //}
+
         public double M11 { get; set; }
         public double M12 { get; set; }
         public double M21 { get; set; }
