@@ -84,7 +84,7 @@
         public MyMatrix RotatePrepend(double angle, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
-            var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
+            var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), OffsetX, OffsetY);
             return rotateAngle * matrix1;
         }
 
@@ -108,7 +108,7 @@
         {
             angleX = angleX * Math.PI / 180;
             angleY = angleY * Math.PI / 180;
-            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, 0, 0);
+            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, OffsetX, OffsetY);
             return matrix1 * skewAngle;
         }
 
@@ -116,7 +116,7 @@
         {
             angleX = angleX * Math.PI / 180;
             angleY = angleY * Math.PI / 180;
-            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, 0, 0);
+            var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, OffsetX, OffsetY);
             return skewAngle * matrix1;
         }
         #endregion
