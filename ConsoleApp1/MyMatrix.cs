@@ -13,7 +13,7 @@
             OffsetY = offsetY;
         }
 
-        #region Multiplication
+        
         //let the first matrix be denotd as a and the second matrix be denoted as b
         public static MyMatrix Multiply(MyMatrix a, MyMatrix b)
         {
@@ -29,9 +29,9 @@
             var matrix = new MyMatrix(ab11, ab12, ab21, ab22, abX, abY);
             return matrix;
         }
-        #endregion
+        
 
-        #region Scale
+        
         public void ScaleAt(MyMatrix matrix1, double x, double y)
         {
             var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
@@ -44,9 +44,9 @@
             var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
             Multiply(matrix2, matrix1);
         }
-        #endregion
+        
 
-        #region Translation
+       
         public void TranslatePrepend(MyMatrix matrix1, double dx, double dy)
         {
             OffsetX += dx;
@@ -64,9 +64,9 @@
             Multiply(matrix1, matrix2);
 
         }
-        #endregion
+        
 
-        #region Operator Overloads
+        
         public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)
         {
 
@@ -81,9 +81,9 @@
 
             
         //}
-        #endregion
+        
 
-        #region Rotation
+       
         public void RotatePrepend(double angle, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
@@ -105,9 +105,8 @@
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), x, y);
             Multiply(matrix1, rotateAngle);
         }
-        #endregion
 
-        #region Skew
+       
         public void SkewAt(double angleX, double angleY, MyMatrix matrix1)
         {
             angleX = angleX * Math.PI / 180;
@@ -123,7 +122,6 @@
             var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, OffsetX, OffsetY);
             Multiply(skewAngle, matrix1);
         }
-        #endregion
 
         public MyMatrix MatrixInvert()
         {
@@ -140,34 +138,6 @@
 
             return newMatrix;
         }
-
-        #region Transformation
-        public static double[,] TransformMatrixToArray(MyMatrix matrix)
-        {
-            double[,] arrayMatrix = new double[3, 3];
-
-            arrayMatrix[0, 0] = matrix.M11;
-            arrayMatrix[1, 0] = matrix.M21;
-            arrayMatrix[2, 0] = matrix.OffsetX;
-
-            arrayMatrix[0, 1] = matrix.M12;
-            arrayMatrix[1, 1] = matrix.M22;
-            arrayMatrix[2, 1] = matrix.OffsetY;
-
-            arrayMatrix[0, 2] = 0;
-            arrayMatrix[1, 2] = 0;
-            arrayMatrix[2, 2] = 1;
-
-
-            return arrayMatrix;
-
-        }
-
-        public static MyMatrix TransformArrayToMatrix(double[,] arr)
-        {
-            return new MyMatrix(arr[0, 0], arr[0, 1], arr[1, 0], arr[1, 1], arr[2, 0], arr[2, 1]);
-        } 
-        #endregion
 
         public double DeterminantOfMatrix()
         {
