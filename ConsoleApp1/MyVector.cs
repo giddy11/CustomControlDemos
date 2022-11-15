@@ -66,7 +66,7 @@ public struct MyVector
         return myVector;
     }
 
-    public static MyVector operator /(MyVector myVector, double factor)
+    public static MyVector operator / (MyVector myVector, double factor)
     {
 
         myVector.ScalarDivision(factor);
@@ -87,8 +87,9 @@ public struct MyVector
 
     public void Normalize()
     {
-        X = X / LengthOfVector;
-        Y = Y / LengthOfVector;
+        var len = LengthOfVector;
+        X = X / len;
+        Y = Y / len;
     }
     public static double CrossProduct(MyVector myVector1, MyVector myVector2)
     {

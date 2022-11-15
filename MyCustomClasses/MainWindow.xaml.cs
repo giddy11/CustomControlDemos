@@ -25,7 +25,7 @@ namespace MyCustomClasses
             InitializeComponent();
         }
 
-        //Vector
-        //Matrix
+        Vector vet = new Vector();
+        Matrix mat = new Matrix();
     }
 }
