@@ -51,15 +51,15 @@ var matrix3 = new MyMatrix(1, 2, 3, 4, 0, 1);
 var matrix4 = new MyMatrix(0,0,0,0,0,0);
 var matrixInv = new MyMatrix(1, 2, 3, 4, 0, 0);
 
+matrix3.DeterminantOfMatrix();
 
-
-var result3 = accesor.MatrixInvert(matrixInv);
+//var result3 = accesor.MatrixInvert(matrixInv);
 
 //var multiply = new MyMatrix();
 //multiply.Multiply(matrix3, matrix5);
 //multiply.Scale()
 
 
-//Console.WriteLine(result1);
+Console.WriteLine();
 
 Console.ReadLine();
