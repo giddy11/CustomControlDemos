@@ -32,34 +32,37 @@
         #endregion
 
         #region Scale
-        public MyMatrix ScaleAt(MyMatrix matrix1, double x, double y)
+        public void ScaleAt(MyMatrix matrix1, double x, double y)
         {
             var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
-            return matrix1 * matrix2;
+            Multiply(matrix1, matrix2);
+
         }
 
-        public MyMatrix ScalePrepend(MyMatrix matrix1, double x, double y)
+        public void ScalePrepend(MyMatrix matrix1, double x, double y)
         {
             var matrix2 = new MyMatrix(x, M12, M21, y, OffsetX, OffsetY);
-            return matrix2 * matrix1;
+            Multiply(matrix2, matrix1);
         }
         #endregion
 
         #region Translation
-        public MyMatrix TranslatePrepend(MyMatrix matrix1, double dx, double dy)
+        public void TranslatePrepend(MyMatrix matrix1, double dx, double dy)
         {
             OffsetX += dx;
             OffsetY += dy;
             var matrix2 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
-            return matrix2 * matrix1;
+            Multiply(matrix2, matrix1);
+
         }
 
-        public MyMatrix TranslateAt(MyMatrix matrix1, double dx, double dy)
+        public void TranslateAt(MyMatrix matrix1, double dx, double dy)
         {
             OffsetX += dx;
             OffsetY += dy;
             var matrix2 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
-            return matrix1 * matrix2;
+            Multiply(matrix1, matrix2);
+
         }
         #endregion
 
@@ -81,43 +84,44 @@
         #endregion
 
         #region Rotation
-        public MyMatrix RotatePrepend(double angle, MyMatrix matrix1)
+        public void RotatePrepend(double angle, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), OffsetX, OffsetY);
-            return rotateAngle * matrix1;
+            Multiply(rotateAngle, matrix1);
+
         }
 
-        public MyMatrix RotatePrepend(double angle, double x, double y, MyMatrix matrix1)
+        public void RotatePrepend(double angle, double x, double y, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), x, y);
-            return rotateAngle * matrix1;
+            Multiply(rotateAngle, matrix1);
         }
 
-        public MyMatrix RotateAt(double angle, double x, double y, MyMatrix matrix1)
+        public void RotateAt(double angle, double x, double y, MyMatrix matrix1)
         {
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), x, y);
-            return matrix1 * rotateAngle;
+            Multiply(matrix1, rotateAngle);
         }
         #endregion
 
         #region Skew
-        public MyMatrix SkewAt(double angleX, double angleY, MyMatrix matrix1)
+        public void SkewAt(double angleX, double angleY, MyMatrix matrix1)
         {
             angleX = angleX * Math.PI / 180;
             angleY = angleY * Math.PI / 180;
             var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, OffsetX, OffsetY);
-            return matrix1 * skewAngle;
+            Multiply(matrix1, skewAngle);
         }
 
-        public MyMatrix SkewPrepend(double angleX, double angleY, MyMatrix matrix1)
+        public void SkewPrepend(double angleX, double angleY, MyMatrix matrix1)
         {
             angleX = angleX * Math.PI / 180;
             angleY = angleY * Math.PI / 180;
             var skewAngle = new MyMatrix(1, Math.Tan(angleY), Math.Tan(angleX), 1, OffsetX, OffsetY);
-            return skewAngle * matrix1;
+            Multiply(skewAngle, matrix1);
         }
         #endregion
 
