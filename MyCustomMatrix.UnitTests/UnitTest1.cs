@@ -1,15 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace UnitTestProject1
+namespace MyCustomMatrix.UnitTests
 {
     [TestClass]
-    public class CustomVectorTests
+    public class UnitTest1
     {
         [TestMethod]
-        public void ShouldGetLengthOfVector()
+        public void TestMethod1()
         {
-            ihk
+            
         }
     }
 }

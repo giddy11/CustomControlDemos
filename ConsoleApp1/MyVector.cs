@@ -50,6 +50,7 @@ public struct MyVector
         return angle;
     }
 
+    //this is also the dot product
     public static double Multiply(MyVector myVector1, MyVector myVector2)
     {
         return (myVector1.X * myVector2.X) + (myVector1.Y * myVector2.Y);

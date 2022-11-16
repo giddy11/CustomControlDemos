@@ -26,7 +26,7 @@ namespace CustomControlDemo
             InitializeComponent();
             DataContext = new DataObject() { Name = "Brian Legends"};
         }
-
+        Vector v = new Vector();
         //public class DataObject : INotifyPropertyChanged
         //{
         //    private void NotifyPropertyChanged(string propertyName)
@@ -49,5 +49,8 @@ namespace CustomControlDemo
 
         //    public event PropertyChangedEventHandler PropertyChanged;
         //}
+
+
+        
     }
 }
