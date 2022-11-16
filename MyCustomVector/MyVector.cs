@@ -1,4 +1,6 @@
-﻿namespace CustomClasses
+﻿using System.Numerics;
+
+namespace CustomClasses
 {
     public struct MyVector
     {
@@ -56,10 +58,10 @@
             return (myVector1.X * myVector2.X) + (myVector1.Y * myVector2.Y);
         }
 
-        public static double operator *(MyVector myVector1, MyVector myVector2)
-        {
-            return MyVector.Multiply(myVector1, myVector2);
-        }
+        //public static double operator *(MyVector myVector1, MyVector myVector2)
+        //{
+        //    return MyVector.Multiply(myVector1, myVector2);
+        //}
 
         public static MyVector operator *(double factor, MyVector myVector)
         {
@@ -67,12 +69,12 @@
             return myVector;
         }
 
-        public static MyVector operator /(MyVector myVector, double factor)
-        {
+        //public static MyVector operator /(MyVector myVector, double factor)
+        //{
 
-            myVector.ScalarDivision(factor);
-            return myVector;
-        }
+        //    myVector.ScalarDivision(factor);
+        //    return myVector;
+        //}
 
         public void ScalarMultiplication(double factor)
         {
@@ -85,7 +87,6 @@
             X /= factor;
             Y /= factor;
         }
-
         public void Normalize()
         {
             var len = LengthOfVector;

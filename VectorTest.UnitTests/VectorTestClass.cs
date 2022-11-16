@@ -1,4 +1,5 @@
 using CustomClasses;
+using System;
 using Xunit;
 
 namespace VectorTest.UnitTests
@@ -31,7 +32,63 @@ namespace VectorTest.UnitTests
             Assert.Equal(expected.ToString(), actual.ToString());
         }
 
+        [Fact]
+        public void ShouldSubtractVectors()
+        {
+            // Arrange
+            var vector1 = new MyVector(2, 4);
+            var vector2 = new MyVector(1, 3);
+            var expected = new MyVector(1, 1);
 
+            // Act
+            MyVector actual = MyVector.Subtract(vector1, vector2);
 
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
+
+        [Fact]
+        public void ShouldGetAngleBetweenTwoVectors()
+        {
+            // Arrange
+            var vector1 = new MyVector(20, 10);
+            var vector2 = new MyVector(10, 20);
+            var expected = 36.87;
+
+            // Act
+            var actual = Math.Round(MyVector.AngleBetween(vector1, vector2), 2);
+
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
+
+        [Fact]
+        public void ShouldMultiplyTwoVectors()
+        {
+            // Arrange
+            var vector1 = new MyVector(20, 10);
+            var vector2 = new MyVector(10, 20);
+            var expected = 400;
+
+            // Act
+            var actual = MyVector.Multiply(vector1, vector2);
+
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
+
+        [Fact]
+        public void ShouldGetTheScalarMultiplication()
+        {
+            // Arrange
+            var vector1 = new MyVector(20, 10);
+            var expected = 400;
+
+            // Act
+            var actual = vector1.ScalarMultiplication(2);
+
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
     }
 }
