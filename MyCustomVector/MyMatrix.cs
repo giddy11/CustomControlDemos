@@ -137,6 +137,11 @@ namespace CustomClasses
             OffsetY /= determinant;
         }
 
+        public override string ToString()
+        {
+            return $"{M11},{M12},{M21},{M22},{OffsetX},{OffsetY}";
+        }
+
         public double DeterminantOfMatrix()
         {
             var determinant = (M11 * M22) - (M12 * M21);
