@@ -73,9 +73,9 @@ namespace CustomClasses
         }
         public void Normalize()
         {
-            var len = LengthOfVector;
-            X = X / len;
-            Y = Y / len;
+            //var len = LengthOfVector;
+            X = X / LengthOfVector;
+            Y = Y / LengthOfVector;
         }
         public static double CrossProduct(MyVector myVector1, MyVector myVector2)
         {
