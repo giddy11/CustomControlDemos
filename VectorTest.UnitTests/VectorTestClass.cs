@@ -8,7 +8,7 @@ namespace VectorTest.UnitTests
     {
         [Theory]
         [InlineData(4,3,5)]
-        [InlineData(1,2, 2.23606797749979)]
+        [InlineData(1.0,2, 2.24)]
         public void ShouldGetLengthOfVector(double x, double y, double expected)
         {
             var vector = new MyVector(x, y);
@@ -26,7 +26,7 @@ namespace VectorTest.UnitTests
             var expected = new MyVector(3,7);
 
             // Act
-            MyVector actual = MyVector.Add(vector1, vector2);
+            MyVector actual = vector1 + vector2;
 
             // Assert
             Assert.Equal(expected.ToString(), actual.ToString());
@@ -41,7 +41,7 @@ namespace VectorTest.UnitTests
             var expected = new MyVector(1, 1);
 
             // Act
-            MyVector actual = MyVector.Subtract(vector1, vector2);
+            MyVector actual = vector1 - vector2;
 
             // Assert
             Assert.Equal(expected.ToString(), actual.ToString());
@@ -56,7 +56,7 @@ namespace VectorTest.UnitTests
             var expected = 36.87;
 
             // Act
-            var actual = Math.Round(MyVector.AngleBetween(vector1, vector2), 2);
+            var actual = MyVector.AngleBetween(vector1, vector2);
 
             // Assert
             Assert.Equal(expected.ToString(), actual.ToString());
@@ -71,7 +71,7 @@ namespace VectorTest.UnitTests
             var expected = 400;
 
             // Act
-            var actual = MyVector.Multiply(vector1, vector2);
+            var actual = vector1 * vector2;
 
             // Assert
             Assert.Equal(expected.ToString(), actual.ToString());
@@ -82,10 +82,54 @@ namespace VectorTest.UnitTests
         {
             // Arrange
             var vector1 = new MyVector(20, 10);
-            var expected = 400;
+            var expected = new MyVector(40,20);
 
             // Act
-            var actual = vector1.ScalarMultiplication(2);
+            var actual = 2 * vector1;
+
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
+
+        [Fact]
+        public void ShouldGetTheScalarDivision()
+        {
+            // Arrange
+            var vector1 = new MyVector(20, 10);
+            var expected = new MyVector(10, 5);
+
+            // Act
+            var actual = vector1 / 2;
+
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
+
+        //[Fact]
+        //public void ShouldNormalizeVector()
+        //{
+        //    // Arrange
+        //    var vector1 = new MyVector(5, 3);
+        //    var expected = new MyVector(40, 20);
+
+        //    // Act
+        //    var actual = vector1.Normalize;
+
+        //    // Assert
+        //    Assert.Equal(expected.ToString(), actual.ToString());
+        //}
+
+
+        [Fact]
+        public void ShouldGetCrossProductOfTwoVectors()
+        {
+            // Arrange
+            var vector1 = new MyVector(20, 10);
+            var vector2 = new MyVector(10, 20);
+            var expected = 300;
+
+            // Act
+            var actual = MyVector.CrossProduct(vector1, vector2);
 
             // Assert
             Assert.Equal(expected.ToString(), actual.ToString());
