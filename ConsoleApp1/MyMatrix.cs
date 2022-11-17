@@ -122,14 +122,42 @@
         {
             var determinant = DeterminantOfMatrix();
 
-            var a11 = M11 / determinant;
-            var a12 = M12 / determinant;
-            var a21 = M21 / determinant;
-            var a22 = M22 / determinant;
-            var ax = OffsetX / determinant;
-            var ay = OffsetY / determinant;
+            //var a11 = M11 / determinant;
+            //var a12 = M12 / determinant;
+            //var a21 = M21 / determinant;
+            //var a22 = M22 / determinant;
+            //var ax = OffsetX / determinant;
+            //var ay = OffsetY / determinant;
 
-            var newMatrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
+            //var newMatrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
+
+            M11 = M22;
+            M12 = M21;
+            M21 = M12;
+            M22 = M11;
+            OffsetX = 0;
+            OffsetY = 0;
+
+            var adjoint = new MyMatrix(M11, M21, OffsetX, M12, M22, OffsetY);
+            return determinant / adjoint
+        }
+
+        public void ScalarDivision(double factor)
+        {
+            M11 /= factor;
+            M12 /= factor;
+            M21 /= factor;
+            M22 /= factor;
+            OffsetX /= factor;
+            OffsetY /= factor;
+
+        }
+
+        public static MyMatrix operator /(MyMatrix myVector, double factor)
+        {
+
+            MyMatrix.ScalarDivision(factor);
+            return myVector;
         }
 
         public double DeterminantOfMatrix()
