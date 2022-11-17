@@ -67,12 +67,12 @@ namespace CustomClasses
         }
 
 
-        //public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)
-        //{
+        public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)
+        {
 
-        //    var multiply = Multiply(matrix1, matrix2);
-        //    return multiply;
-        //}
+            var multiply = Multiply(matrix1, matrix2);
+            return multiply;
+        }
 
         public void Rotate(double angle)
         {
@@ -126,16 +126,15 @@ namespace CustomClasses
 
         public void MatrixInvert()
         {
+            var mat = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
             var determinant = DeterminantOfMatrix();
 
-            var a11 = M11 / determinant;
-            var a12 = M12 / determinant;
-            var a21 = M21 / determinant;
-            var a22 = M22 / determinant;
-            var ax = OffsetX / determinant;
-            var ay = OffsetY / determinant;
-
-            var newMatrix = new MyMatrix(a11, a12, a21, a22, ax, ay);
+            M11 /= determinant;
+            M12 /= determinant;
+            M21 /=  determinant;
+            M22 /= determinant;
+            OffsetX /= determinant;
+            OffsetY /= determinant;
         }
 
         public double DeterminantOfMatrix()

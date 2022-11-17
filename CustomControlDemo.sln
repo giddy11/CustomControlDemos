@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomClasses", "MyCustomVe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorTest.UnitTests", "VectorTest.UnitTests\VectorTest.UnitTests.csproj", "{D3E92BDB-930F-4B10-ADC4-2721130CDD75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixTests.UnitTests", "MatrixTests.UnitTests\MatrixTests.UnitTests.csproj", "{EC39A872-E113-42E9-96A1-706638F8951A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformation2D", "Transformation2D\Transformation2D.csproj", "{B1FBA415-5612-4527-B719-50EEEFC2CA54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{D3E92BDB-930F-4B10-ADC4-2721130CDD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E92BDB-930F-4B10-ADC4-2721130CDD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E92BDB-930F-4B10-ADC4-2721130CDD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC39A872-E113-42E9-96A1-706638F8951A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC39A872-E113-42E9-96A1-706638F8951A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC39A872-E113-42E9-96A1-706638F8951A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC39A872-E113-42E9-96A1-706638F8951A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
