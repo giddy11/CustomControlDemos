@@ -1,5 +1,4 @@
-using CustomClasses;
-using System;
+using CustomStructs;
 using Xunit;
 
 namespace VectorTest.UnitTests
@@ -7,23 +6,23 @@ namespace VectorTest.UnitTests
     public class VectorTestClass
     {
         [Theory]
-        [InlineData(4,3,5)]
-        [InlineData(1.0,2, 2.24)]
+        [InlineData(4, 3, 5)]
+        [InlineData(1.0, 2, 2.24)]
         public void ShouldGetLengthOfVector(double x, double y, double expected)
         {
             var vector = new MyVector(x, y);
             var actual = vector.LengthOfVector;
-            
+
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void ShouldAddVectors ()
+        public void ShouldAddVectors()
         {
             // Arrange
             var vector1 = new MyVector(2, 4);
-            var vector2 = new MyVector(1,3);
-            var expected = new MyVector(3,7);
+            var vector2 = new MyVector(1, 3);
+            var expected = new MyVector(3, 7);
 
             // Act
             MyVector actual = vector1 + vector2;
@@ -82,7 +81,7 @@ namespace VectorTest.UnitTests
         {
             // Arrange
             var vector1 = new MyVector(20, 10);
-            var expected = new MyVector(40,20);
+            var expected = new MyVector(40, 20);
 
             // Act
             var actual = 2 * vector1;

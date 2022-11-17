@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyCustomVector\CustomClasses.csproj" />
+    <ProjectReference Include="..\CustomStructs\CustomStructs.csproj" />
   </ItemGroup>
 
 </Project>

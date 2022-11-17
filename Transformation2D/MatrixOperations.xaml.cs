@@ -1,6 +1,5 @@
-﻿using CustomClasses;
+﻿using CustomStructs;
 using System.Windows;
-using System.Windows.Media;
 
 namespace Transformation2D
 {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CustomClasses
+﻿namespace CustomStructs
 {
     public struct MyMatrix
     {
@@ -138,15 +132,35 @@ namespace CustomClasses
 
         public void MatrixInvert()
         {
-            var mat = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
             var determinant = DeterminantOfMatrix();
 
-            M11 /= determinant;
-            M12 /= determinant;
-            M21 /= determinant;
-            M22 /= determinant;
-            OffsetX /= determinant;
-            OffsetY /= determinant;
+            var a11 = M22;
+            var a12  = M21;
+            var a21 = M12;
+            var a22 = M11;
+            var offX =OffsetX;
+            var offY = OffsetY;
+
+            a11 = Math.Round(M22 / determinant, 1);
+            a12 = Math.Round(-M21 / determinant, 1);
+            a21 = Math.Round(-M12 / determinant, 1);
+            a22 = Math.Round(M11 / determinant, 1);
+            offX = 0;
+            offY = 0;
+
+            var adjoint = new MyMatrix(a11, a21, a12, a22, offX, offY);
+            SetFromAdjoint(adjoint);
+
+        }
+
+        private void SetFromAdjoint(MyMatrix adjoint)
+        {
+            M11 = adjoint.M11;
+            M12 = adjoint.M12;
+            M21 = adjoint.M21;
+            M22 = adjoint.M22;
+            OffsetX= adjoint.OffsetX;
+            OffsetY= adjoint.OffsetY;
         }
 
         public override string ToString()

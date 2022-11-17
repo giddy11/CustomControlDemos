@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace CustomClasses
+namespace CustomStructs
 {
     public struct MyVector
     {

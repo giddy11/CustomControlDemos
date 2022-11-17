@@ -1,4 +1,4 @@
-using CustomClasses;
+using CustomStructs;
 using Xunit;
 
 namespace MatrixTests.UnitTests
@@ -25,7 +25,7 @@ namespace MatrixTests.UnitTests
         {
             // Arrange
             var actual = new MyMatrix(1, 2, 3, 4, 0, 0);
-            var expected = new MyMatrix(-2, 1, 1.5, 0.5, 0, 0);
+            var expected = new MyMatrix(-2, 1, 1.5, -0.5, 0, 0);
 
             // Act
             actual.MatrixInvert();
@@ -39,7 +39,7 @@ namespace MatrixTests.UnitTests
         {
             // Arrange
             var matrix1 = new MyMatrix(1, 2, 3, 4, 0, 1);
-            var expected = new MyMatrix(1,1,3,2,0,0.5);
+            var expected = new MyMatrix(1, 1, 3, 2, 0, 0.5);
 
             // Act
             matrix1.Scale(1, 0.5);
