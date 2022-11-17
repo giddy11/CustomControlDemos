@@ -74,8 +74,9 @@ namespace CustomClasses
         public void Normalize()
         {
             var len = LengthOfVector;
-            X = X / len;
-            Y = Y / len;
+            X = Math.Round((X / len),1);
+            Y = Math.Round((Y / len), 1);
+            var result = new MyVector(X, Y);
         }
         public static double CrossProduct(MyVector myVector1, MyVector myVector2)
         {
@@ -86,10 +87,10 @@ namespace CustomClasses
         }
 
 
-        //public override string ToString()
-        //{
-        //    return $"[{X}, {Y}]";
-        //}
+        public override string ToString()
+        {
+            return $"[{X}, {Y}]";
+        }
 
         public double X { get; set; }
         public double Y { get; set; }

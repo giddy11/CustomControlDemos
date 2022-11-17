@@ -40,9 +40,21 @@ namespace CustomClasses
 
         public void Scale(double x, double y)
         {
+
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
             var matrix2 = new MyMatrix(x, 0, 0, y, 0, 0);
-            Multiply(matrix1, matrix2);
+            var result = Multiply(matrix1, matrix2);
+            SetFromMatrix(result);
+        }
+
+        private void SetFromMatrix(MyMatrix result)
+        {
+            M11 = result.M11;
+            M12 = result.M12;
+            M21 = result.M21;
+            M22 = result.M22;
+            OffsetX = result.OffsetX;
+            OffsetY = result.OffsetY;
         }
 
         public void ScalePrepend(double x, double y)
@@ -131,7 +143,7 @@ namespace CustomClasses
 
             M11 /= determinant;
             M12 /= determinant;
-            M21 /=  determinant;
+            M21 /= determinant;
             M22 /= determinant;
             OffsetX /= determinant;
             OffsetY /= determinant;

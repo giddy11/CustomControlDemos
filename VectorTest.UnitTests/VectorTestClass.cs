@@ -106,18 +106,18 @@ namespace VectorTest.UnitTests
         }
 
         [Fact]
-        //public void ShouldNormalizeVector()
-        //{
-        //    // Arrange
-        //    var actual = new MyVector(5, 3);
-        //    var expected = new MyVector(0,0);
+        public void ShouldNormalizeVector()
+        {
+            // Arrange
+            var actual = new MyVector(5, 3);
+            var expected = new MyVector(0.9, 0.5);
 
-        //    // Act
-        //    actual.Normalize();
+            // Act
+            actual.Normalize();
 
-        //    // Assert
-        //    Assert.Equal(expected.ToString(), actual.ToString());
-        //}
+            // Assert
+            Assert.Equal(expected.ToString(), actual.ToString());
+        }
 
 
         [Fact]
