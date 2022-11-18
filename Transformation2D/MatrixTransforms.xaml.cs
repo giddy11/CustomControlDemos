@@ -41,45 +41,38 @@ namespace Transformation2D
             //Rotation: 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.Rotate(45);
-            tbRotate.Text = "(" + MatrixRound(m).ToString()
-            + ")";
+            tbRotate.Text = MatrixFormat(m);
 
             // Rotation - Prepend: 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.RotatePrepend(45);
-            tbRotatePrepend.Text = "(" + MatrixRound(m).ToString() + ")";
+            tbRotatePrepend.Text = MatrixFormat(m);
 
             //Rotation at (x = 1, y = 2): 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.RotateAt(45, 1, 2);
-            tbRotateAt.Text = "(" + MatrixRound(m).ToString() + ")";
+            tbRotateAt.Text = MatrixFormat(m);
 
             // Rotation at (x = 1, y = 2) - Prepend: 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.RotateAtPrepend(45, 1, 2);
-            tbRotateAtPrepend.Text = "(" + MatrixRound(m).ToString() + ")";
+            tbRotateAtPrepend.Text = MatrixFormat(m);
 
             // Skew: 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.SkewAt(45, 30);
-            tbSkew.Text = "(" + MatrixRound(m).ToString() + ")";
+            tbSkew.Text = MatrixFormat(m);
 
             // Skew - Prepend: 
             m = new MyMatrix(1, 2, 3, 4, 0, 1);
             m.SkewPrepend(45, 30);
-            tbSkewPrepend.Text = "(" + MatrixRound(m).ToString() + ")";
+            tbSkewPrepend.Text = MatrixFormat(m);
         }
 
-        
-        private MyMatrix MatrixRound(MyMatrix m)
+        public string MatrixFormat(MyMatrix m)
         {
-            m.M11 = Math.Round(m.M11, 3);
-            m.M12 = Math.Round(m.M12, 3);
-            m.M21 = Math.Round(m.M21, 3);
-            m.M22 = Math.Round(m.M22, 3);
-            m.OffsetX = Math.Round(m.OffsetX, 3);
-            m.OffsetY = Math.Round(m.OffsetY, 3);
-            return m;
+            return "(" + m.MatrixRound(m).ToString() + ")";
         }
+        
     }
 }

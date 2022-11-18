@@ -216,6 +216,16 @@
             return determinant;
         }
 
+        public MyMatrix MatrixRound(MyMatrix m)
+        {
+            m.M11 = Math.Round(m.M11, 3);
+            m.M12 = Math.Round(m.M12, 3);
+            m.M21 = Math.Round(m.M21, 3);
+            m.M22 = Math.Round(m.M22, 3);
+            m.OffsetX = Math.Round(m.OffsetX, 3);
+            m.OffsetY = Math.Round(m.OffsetY, 3);
+            return m;
+        }
 
         public double Determinant
         {
@@ -226,11 +236,11 @@
 
         }
 
-        public double M11 { get; set; }
-        public double M12 { get; set; }
-        public double M21 { get; set; }
-        public double M22 { get; set; }
-        public double OffsetX { get; set; }
-        public double OffsetY { get; set; }
+        public double M11 { get; private set; }
+        public double M12 { get; private set; }
+        public double M21 { get; private set; }
+        public double M22 { get; private set; }
+        public double OffsetX { get; private set; }
+        public double OffsetY { get; private set; }
     }
 }
