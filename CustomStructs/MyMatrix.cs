@@ -118,11 +118,27 @@
         // Failed Test
         public void RotateAt(double angle, double x, double y)
         {
-            var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
+            var translateMatrix = new MyMatrix(1, 0, 0, 1, -x, -y);
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
-            var result = Multiply(matrix1, rotateAngle);
+            var translateMatrixBack = new MyMatrix(1, 0, 0, 1, x, y);
+            var result1 = Multiply(translateMatrix,rotateAngle);
+            var result2 = Multiply(result1,translateMatrixBack);
+
+            var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
+
+            var result = Multiply(matrix1, result2);
             SetFromMatrix(result);
+        }
+
+        public void MatrixTransformation(double angle, double x, double y)
+        {
+            var translateMatrix = new MyMatrix(1, 0, 0, 1, -x, -y);
+            angle = angle * Math.PI / 180;
+            var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
+            var translateMatrixBack = new MyMatrix(1, 0, 0, 1, x, y);
+            var result1 = Multiply(translateMatrix, rotateAngle);
+            var result2 = Multiply(result1, translateMatrixBack);
         }
 
         // Failed Test
