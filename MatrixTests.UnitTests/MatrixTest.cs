@@ -137,7 +137,7 @@ namespace MatrixTests.UnitTests
         {
             // Arrange
             var matrix1 = new MyMatrix(1, 2, 3, 4, 0, 1);
-            var expected = new MyMatrix(2.828, 4.243, 1.414, 1.414, 1.343, 3.929);
+            var expected = new MyMatrix(2.828, 4.242, 1.414, 1.414, 1.344, 3.93);
 
             // Act
             matrix1.RotateAtPrepend(45, 1, 2);

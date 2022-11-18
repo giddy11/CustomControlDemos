@@ -70,6 +70,7 @@ namespace Transformation2D
             tbSkewPrepend.Text = "(" + MatrixRound(m).ToString() + ")";
         }
 
+        
         private MyMatrix MatrixRound(MyMatrix m)
         {
             m.M11 = Math.Round(m.M11, 3);
