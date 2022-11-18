@@ -14,9 +14,11 @@
         }
 
 
-        //let the first matrix be denotd as a and the second matrix be denoted as b
+        // let the first matrix be denotd as a and the second matrix be denoted as b
+        // Tested 
         public static MyMatrix Multiply(MyMatrix a, MyMatrix b)
         {
+
             var ab11 = (a.M11 * b.M11) + (a.M12 * b.M21);
             var ab12 = (a.M11 * b.M12) + (a.M12 * b.M22);
 
@@ -26,12 +28,19 @@
             var abX = (a.OffsetX * b.M11) + (a.OffsetY * b.M21) + (1 * b.OffsetX);
             var abY = (a.OffsetX * b.M12) + (a.OffsetY * b.M22) + (1 * b.OffsetY);
 
-            var matrix = new MyMatrix(ab11, ab12, ab21, ab22, abX, abY);
+            var a11 = Math.Round(ab11,3);
+            var a12 = Math.Round(ab12,3);
+            var a21 = Math.Round(ab21, 3);
+            var a22 = Math.Round(ab22,3);
+            var offX = Math.Round(abX, 3);
+            var offY = Math.Round(abY, 3);
+
+            var matrix = new MyMatrix(a11, a12, a21, a22, offX, offY);
             return matrix;
         }
 
 
-
+        // Tested
         public void Scale(double x, double y)
         {
 
@@ -51,6 +60,7 @@
             OffsetY = result.OffsetY;
         }
 
+        // Tested
         public void ScalePrepend(double x, double y)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -67,6 +77,7 @@
             SetFromMatrix(result);
         }
 
+        // Tested
         public void TranslateAt(double dx, double dy)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -83,14 +94,18 @@
             return multiply;
         }
 
+        // Tested
         public void Rotate(double angle)
         {
             angle = angle * Math.PI / 180;
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
+
             var matrix2 = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
             var result = Multiply(matrix1, matrix2);
             SetFromMatrix(result);
         }
+
+        // Tested
         public void RotatePrepend(double angle)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -100,7 +115,7 @@
             SetFromMatrix(result);
         }
 
-
+        // Failed Test
         public void RotateAt(double angle, double x, double y)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -110,6 +125,7 @@
             SetFromMatrix(result);
         }
 
+        // Failed Test
         public void RotateAtPrepend(double angle, double x, double y)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -120,7 +136,7 @@
         }
 
         
-
+        // Tested
         public void SkewAt(double angleX, double angleY)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -131,6 +147,7 @@
             SetFromMatrix(result);
         }
 
+        // Tested
         public void SkewPrepend(double angleX, double angleY)
         {
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
@@ -141,6 +158,7 @@
             SetFromMatrix(result);
         }
 
+        // Tested
         public void MatrixInvert()
         {
             var determinant = DeterminantOfMatrix();
