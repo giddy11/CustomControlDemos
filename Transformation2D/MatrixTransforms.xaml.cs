@@ -13,7 +13,7 @@ namespace Transformation2D
         public MatrixTransforms()
         {
             InitializeComponent();
-
+            Matrix m9;
             // Original matrix
             var m = new MyMatrix(1, 2, 3, 4, 0, 1);
             tbOriginal.Text = ($" ({m.ToString()}) ");
@@ -73,6 +73,8 @@ namespace Transformation2D
         {
             return "(" + m.MatrixRound(m).ToString() + ")";
         }
+
+        
         
     }
 }
