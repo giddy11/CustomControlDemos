@@ -28,10 +28,10 @@
             var abX = (a.OffsetX * b.M11) + (a.OffsetY * b.M21) + (1 * b.OffsetX);
             var abY = (a.OffsetX * b.M12) + (a.OffsetY * b.M22) + (1 * b.OffsetY);
 
-            var a11 = Math.Round(ab11,3);
-            var a12 = Math.Round(ab12,3);
+            var a11 = Math.Round(ab11, 3);
+            var a12 = Math.Round(ab12, 3);
             var a21 = Math.Round(ab21, 3);
-            var a22 = Math.Round(ab22,3);
+            var a22 = Math.Round(ab22, 3);
             var offX = Math.Round(abX, 3);
             var offY = Math.Round(abY, 3);
 
@@ -115,15 +115,15 @@
             SetFromMatrix(result);
         }
 
-        // Failed Test
+        // Tested
         public void RotateAt(double angle, double x, double y)
         {
             var translateMatrix = new MyMatrix(1, 0, 0, 1, -x, -y);
             angle = angle * Math.PI / 180;
             var rotateAngle = new MyMatrix(Math.Cos(angle), Math.Sin(angle), -Math.Sin(angle), Math.Cos(angle), 0, 0);
             var translateMatrixBack = new MyMatrix(1, 0, 0, 1, x, y);
-            var result1 = Multiply(translateMatrix,rotateAngle);
-            var result2 = Multiply(result1,translateMatrixBack);
+            var result1 = Multiply(translateMatrix, rotateAngle);
+            var result2 = Multiply(result1, translateMatrixBack);
 
             var matrix1 = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
 
@@ -132,7 +132,7 @@
         }
 
 
-        // Failed Test
+        // Tested
         public void RotateAtPrepend(double angle, double x, double y)
         {
             var translateMatrix = new MyMatrix(1, 0, 0, 1, -x, -y);
@@ -148,7 +148,7 @@
             SetFromMatrix(result);
         }
 
-        
+
         // Tested
         public void SkewAt(double angleX, double angleY)
         {
@@ -177,10 +177,10 @@
             var determinant = DeterminantOfMatrix();
 
             var a11 = M22;
-            var a12  = M21;
+            var a12 = M21;
             var a21 = M12;
             var a22 = M11;
-            var offX =OffsetX;
+            var offX = OffsetX;
             var offY = OffsetY;
 
             a11 = Math.Round(M22 / determinant, 1);
@@ -201,8 +201,8 @@
             M12 = adjoint.M12;
             M21 = adjoint.M21;
             M22 = adjoint.M22;
-            OffsetX= adjoint.OffsetX;
-            OffsetY= adjoint.OffsetY;
+            OffsetX = adjoint.OffsetX;
+            OffsetY = adjoint.OffsetY;
         }
 
         public override string ToString()
@@ -216,6 +216,40 @@
             return determinant;
         }
 
+        //private bool CheckIdentity()
+        //{
+        //    var matrix = new MyMatrix(M11, M12, M21, M22, OffsetX, OffsetY);
+        //    if (_identityMatrix == matrix) return true;
+        //    return false;
+        //}
+
+        public static bool operator ==(MyMatrix m1, MyMatrix m2)
+        {
+            var row1Col1 = m1.M11 == m2.M11;
+            var row1Col2 = m1.M12 == m2.M12;
+            var row2Col1 = m1.M21 == m2.M21;
+            var row2Col2 = m1.M22 == m2.M22;
+            var row3Col1 = m1.OffsetX == m2.OffsetX;
+            var row3Col2 = m1.OffsetY == m2.OffsetY;
+
+            if (row1Col1 && row1Col2 && row2Col1 && row2Col2 && row3Col1 && row3Col2) return true;
+            return false;
+        }
+
+
+
+        public static bool operator !=(MyMatrix m1, MyMatrix m2)
+        {
+            var row1Col1 = m1.M11 != m2.M11;
+            var row1Col2 = m1.M12 != m2.M12;
+            var row2Col1 = m1.M21 != m2.M21;
+            var row2Col2 = m1.M22 != m2.M22;
+            var row3Col1 = m1.OffsetX != m2.OffsetX;
+            var row3Col2 = m1.OffsetY != m2.OffsetY;
+            if (row1Col1 && row1Col2 && row2Col1 && row2Col2 && row3Col1 && row3Col2) return true;
+            return false;
+        }
+
         public MyMatrix MatrixRound(MyMatrix m)
         {
             m.M11 = Math.Round(m.M11, 3);
@@ -227,14 +261,6 @@
             return m;
         }
 
-        public double Determinant
-        {
-            get
-            {
-                return DeterminantOfMatrix();
-            }
-
-        }
 
         public double M11 { get; private set; }
         public double M12 { get; private set; }
@@ -242,5 +268,34 @@
         public double M22 { get; private set; }
         public double OffsetX { get; private set; }
         public double OffsetY { get; private set; }
+
+        //public MyMatrix Identity
+        //{
+        //    get
+        //    {
+        //        return _identityMatrix;
+        //    }
+        //}
+
+        //public bool IsIdentityMatrix
+        //{
+        //    get
+        //    {
+        //        return CheckIdentity();
+        //    }
+        //}
+
+        
+
+        public double Determinant
+        {
+            get
+            {
+                return DeterminantOfMatrix();
+            }
+        }
+
+        //MyMatrix _identityMatrix = new MyMatrix(1, 0, 0, 1, 0, 0);
+
     }
 }

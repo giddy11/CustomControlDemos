@@ -173,5 +173,19 @@ namespace MatrixTests.UnitTests
             // Assert
             Assert.Equal(expected.ToString(), matrix1.ToString());
         }
+
+        //public void ShouldTestForIdentity()
+        //{
+        //    // Arrange
+        //    var matrix1 = new MyMatrix(1, 2, 3, 4, 0, 1);
+        //    var matrix2 = new MyMatrix(1, 0, 0, 1, 0, 0);
+        //    var expected = true;
+
+        //    // Act
+        //    MyMatrix.Equals(matrix1, matrix2);
+
+        //    // Assert
+        //    Assert.Equal(expected.ToString(), matrix1.ToString());
+        //}
     }
 }
