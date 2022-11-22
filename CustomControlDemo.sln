@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformation2D", "Transfo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomStructs", "CustomStructs\CustomStructs.csproj", "{40F445E7-4D74-45A1-9E2B-90B91405332D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Dependency_Properties", "Wpf_Dependency_Properties\Wpf_Dependency_Properties.csproj", "{88A04F81-87B1-46B6-8873-F1FD79A7B002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A04F81-87B1-46B6-8873-F1FD79A7B002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A04F81-87B1-46B6-8873-F1FD79A7B002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A04F81-87B1-46B6-8873-F1FD79A7B002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A04F81-87B1-46B6-8873-F1FD79A7B002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
