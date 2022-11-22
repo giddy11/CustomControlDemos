@@ -1,16 +1,8 @@
 ﻿using CustomStructs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Transformation2D
@@ -56,44 +48,42 @@ namespace Transformation2D
             Canvas.SetTop(tbPoint1, pt1.Y);
             Canvas.SetLeft(tbPoint2, pt2.X);
             Canvas.SetTop(tbPoint2, pt2.Y);
-            //tbPoint1.Text = "Pt1(" + pt1.ToString() + ")";
-            //tbPoint2.Text = "Pt2(" + pt2.ToString() + ")";
             tbPoint1.Text = StringDisplay("Pt1", pt1);
             tbPoint2.Text = StringDisplay("Pt2", pt2);
 
 
 
 
-            //Vector v1 = pt1 - pt2;
-            //Matrix m1 = new Matrix();
-            //Point pt3 = new Point();
-            //Point pt4 = new Point();
-            //m1.Rotate(-90);
-            //v1.Normalize();
-            //v1 *= length;
-            //line2 = new Line();
-            //line2.Stroke = Brushes.Gray;
-            //line2.StrokeThickness = 4;
-            //line2.StrokeDashArray = DoubleCollection.Parse("3, 1");
-            //pt3 = pt2 + v1 * m1;
-            //m1 = new Matrix();
-            //m1.Rotate(90);
-            //pt4 = pt2 + v1 * m1;
-            //line2.X1 = pt3.X;
-            //line2.Y1 = pt3.Y;
-            //line2.X2 = pt4.X;
-            //line2.Y2 = pt4.Y;
-            //canvas1.Children.Add(line2);
-            //Canvas.SetLeft(tbPoint3, pt3.X);
-            //Canvas.SetTop(tbPoint3, pt3.Y);
-            //Canvas.SetLeft(tbPoint4, pt4.X);
-            //Canvas.SetTop(tbPoint4, pt4.Y);
-            //pt3.X = Math.Round(pt3.X, 0);
-            //pt3.Y = Math.Round(pt3.Y, 0);
-            //pt4.X = Math.Round(pt4.X, 0);
-            //pt4.Y = Math.Round(pt4.Y, 0);
-            //tbPoint3.Text = "Pt3(" + pt3.ToString() + ")";
-            //tbPoint4.Text = "Pt4(" + pt4.ToString() + ")";
+            Vector v1 = pt1 - pt2;
+            Matrix m1 = new Matrix();
+            Point pt3 = new Point();
+            Point pt4 = new Point();
+            m1.Rotate(-90);
+            v1.Normalize();
+            v1 *= length;
+            line2 = new Line();
+            line2.Stroke = Brushes.Gray;
+            line2.StrokeThickness = 4;
+            line2.StrokeDashArray = DoubleCollection.Parse("3, 1");
+            pt3 = pt2 + v1 * m1;
+            m1 = new Matrix();
+            m1.Rotate(90);
+            pt4 = pt2 + v1 * m1;
+            line2.X1 = pt3.X;
+            line2.Y1 = pt3.Y;
+            line2.X2 = pt4.X;
+            line2.Y2 = pt4.Y;
+            canvas1.Children.Add(line2);
+            Canvas.SetLeft(tbPoint3, pt3.X);
+            Canvas.SetTop(tbPoint3, pt3.Y);
+            Canvas.SetLeft(tbPoint4, pt4.X);
+            Canvas.SetTop(tbPoint4, pt4.Y);
+            pt3.X = Math.Round(pt3.X, 0);
+            pt3.Y = Math.Round(pt3.Y, 0);
+            pt4.X = Math.Round(pt4.X, 0);
+            pt4.Y = Math.Round(pt4.Y, 0);
+            tbPoint2.Text = StringDisplay("Pt3", pt3);
+            tbPoint2.Text = StringDisplay("Pt4", pt4);
         }
 
         public string StringDisplay(string a, Point point)
@@ -117,5 +107,6 @@ namespace Transformation2D
 
         private Line line1;
         private Line line2;
+        Matrix b;
     }
 }
