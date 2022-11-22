@@ -5,9 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Dependency_Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
+        Title="MainWindow" Height="230" Width="300">
     <StackPanel>
-        <Button></Button>
-        <local:MyUC></local:MyUC>
+        <Button Margin="5" Width="120" Click="Button_Click">Increase Awesomeness</Button>
+        <local:MyUC x:Name="MyUCInMain" Awesomeness="4000">
+            <local:MyUC.Style>
+                <Style TargetType="local:MyUC">
+                    <Style.Triggers>
+                        <Trigger Property="Awesomeness" Value="10000">
+                            <Setter Property="Background" Value="Red"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </local:MyUC.Style>
+            
+        </local:MyUC>
+
+        <Label Name="AwesomenessLabel"
+               Content="{Binding ElementName=MyUCInMain, Path=Awesomeness}"
+               FontSize="30"
+               HorizontalAlignment="Center">
+            
+        </Label>
     </StackPanel>
 </Window>

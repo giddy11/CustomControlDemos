@@ -47,8 +47,8 @@
                 <TextBlock HorizontalAlignment="Right" Grid.Column="0" Grid.Row="5" Margin="5,5,10,5">OffsetY</TextBlock>
                 <TextBox Name="tbOffsetY" Grid.Column="1" Grid.Row="5" TextAlignment="Center">0</TextBox>
 
-                <Button Click="BtnApply_Click" Margin="15,20,15,5" Grid.Row="6" Height="25" Grid.ColumnSpan="2">Apply</Button>
-                <Button Click="BtnClose_Click" Margin="15,0,15,5" Grid.Row="7" Height="25" Grid.ColumnSpan="2">Close</Button>
+                <!--<Button Click="BtnApply_Click" Margin="15,20,15,5" Grid.Row="6" Height="25" Grid.ColumnSpan="2">Apply</Button>
+                <Button Click="BtnClose_Click" Margin="15,0,15,5" Grid.Row="7" Height="25" Grid.ColumnSpan="2">Close</Button>-->
             </Grid>
 
             <Border Margin="10" Grid.Column="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Background="{StaticResource MyGrayGridBrush}">

@@ -15,32 +15,37 @@ namespace Wpf_Dependency_Properties
 
 
 
-        public int MyProperty
-        {
-            get { return (int)GetValue(MyDependencyProperty); }
-            set { SetValue(MyDependencyProperty, value); }
-        }
+        //public int MyProperty
+        //{
+        //    get { return (int)GetValue(MyDependencyProperty); }
+        //    set { SetValue(MyDependencyProperty, value); }
+        //}
 
-        public static readonly DependencyProperty MyDependencyProperty =
-            DependencyProperty.Register("MyProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
+        //public static readonly DependencyProperty MyDependencyProperty =
+        //    DependencyProperty.Register("MyProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
 
-        private int _isMouseOverDemo;
-        public int IsMouseOverDemo
-        {
-            get
-            {
-                return _isMouseOverDemo;
-            }
-            set
-            {
-                _isMouseOverDemo = value;
-                ChangeNotification();
-            }
-        }
+        //private int _isMouseOverDemo;
+        //public int IsMouseOverDemo
+        //{
+        //    get
+        //    {
+        //        return _isMouseOverDemo;
+        //    }
+        //    set
+        //    {
+        //        _isMouseOverDemo = value;
+        //        ChangeNotification();
+        //    }
+        //}
 
-        private void ChangeNotification()
+        //private void ChangeNotification()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            MyUCInMain.Awesomeness += 1000;
         }
     }
 }
