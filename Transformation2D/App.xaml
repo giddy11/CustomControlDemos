@@ -2,8 +2,22 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Transformation2D"
-             StartupUri="PerpendicularLine.xaml">
+             StartupUri="ObjectMatrixTransforms.xaml">
     <Application.Resources>
-         
+        <DrawingBrush x:Key="MyGrayGridBrush">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="M0,0 L1,0 1,0.1, 0,0.1Z" Brush="#EEEEEE" />
+                        <GeometryDrawing Geometry="M0,0 L0,1 0.1,1, 0.1,0Z" Brush="#EEEEEE" />
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
     </Application.Resources>
 </Application>

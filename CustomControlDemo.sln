@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixTests.UnitTests", "Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformation2D", "Transformation2D\Transformation2D.csproj", "{B1FBA415-5612-4527-B719-50EEEFC2CA54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "refKeyWord", "refKeyWord\refKeyWord.csproj", "{46F58661-D406-4740-9193-0FF5AF38FA42}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomStructs", "CustomStructs\CustomStructs.csproj", "{40F445E7-4D74-45A1-9E2B-90B91405332D}"
 EndProject
 Global
@@ -61,10 +59,6 @@ Global
 		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1FBA415-5612-4527-B719-50EEEFC2CA54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46F58661-D406-4740-9193-0FF5AF38FA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46F58661-D406-4740-9193-0FF5AF38FA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46F58661-D406-4740-9193-0FF5AF38FA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46F58661-D406-4740-9193-0FF5AF38FA42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F445E7-4D74-45A1-9E2B-90B91405332D}.Release|Any CPU.ActiveCfg = Release|Any CPU
