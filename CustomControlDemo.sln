@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Styling", "Styling", "{4024
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Styling_Dp", "Wpf_Styling_Dp\Wpf_Styling_Dp.csproj", "{B9F3BED9-9A11-4633-A77C-460E1D470E93}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trigger", "Trigger", "{E613AD50-1496-4CA1-945B-B3344AB148DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Trigger_Dp", "Wpf_Trigger_Dp\Wpf_Trigger_Dp.csproj", "{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,12 +87,17 @@ Global
 		{B9F3BED9-9A11-4633-A77C-460E1D470E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F3BED9-9A11-4633-A77C-460E1D470E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F3BED9-9A11-4633-A77C-460E1D470E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B9F3BED9-9A11-4633-A77C-460E1D470E93} = {40241872-DCD5-4435-BE77-5553433F5B6B}
+		{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850} = {E613AD50-1496-4CA1-945B-B3344AB148DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB70DB13-1CD4-4B3C-9A3E-AAA5F7A65FEF}
