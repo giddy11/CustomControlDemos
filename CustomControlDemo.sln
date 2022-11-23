@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomControlDemo", "CustomControlDemo\CustomControlDemo.csproj", "{952FD1D4-AC50-44C7-AA29-0FF20AFBE7A4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCustomControlLibrary1", "WpfCustomControlLibrary1\WpfCustomControlLibrary1.csproj", "{FBC7FAA7-0DDB-426E-93B3-6FB7E2D339BD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCustomControlLibrary2", "WpfCustomControlLibrary2\WpfCustomControlLibrary2.csproj", "{54207441-BCE7-4365-AE77-743A3951A92B}"
@@ -47,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_Templates", "Wpf_Templa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataContext", "DataContext", "{14F70F3E-9BF7-4B51-8DA1-20780B19EA5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_DataContext", "Wpf_DataContext\Wpf_DataContext.csproj", "{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_DataContext", "Wpf_DataContext\Wpf_DataContext.csproj", "{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_DataTemplate", "Wpf_DataTemplate\Wpf_DataTemplate.csproj", "{E7309D3F-8890-465D-87C6-AB6B2319EFA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{952FD1D4-AC50-44C7-AA29-0FF20AFBE7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{952FD1D4-AC50-44C7-AA29-0FF20AFBE7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{952FD1D4-AC50-44C7-AA29-0FF20AFBE7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{952FD1D4-AC50-44C7-AA29-0FF20AFBE7A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBC7FAA7-0DDB-426E-93B3-6FB7E2D339BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBC7FAA7-0DDB-426E-93B3-6FB7E2D339BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC7FAA7-0DDB-426E-93B3-6FB7E2D339BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -123,6 +119,10 @@ Global
 		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7309D3F-8890-465D-87C6-AB6B2319EFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7309D3F-8890-465D-87C6-AB6B2319EFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7309D3F-8890-465D-87C6-AB6B2319EFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7309D3F-8890-465D-87C6-AB6B2319EFA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +134,7 @@ Global
 		{E018C65D-25D2-4B96-A65B-E40D91302C9E} = {8DE3894A-3F29-4B2D-AF46-F2E221A7708B}
 		{C90D7C62-70CD-4C95-9CBD-8B332A316C05} = {8B019523-16DB-4B2A-B54D-8231E7EB853C}
 		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C} = {14F70F3E-9BF7-4B51-8DA1-20780B19EA5F}
+		{E7309D3F-8890-465D-87C6-AB6B2319EFA7} = {8B019523-16DB-4B2A-B54D-8231E7EB853C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB70DB13-1CD4-4B3C-9A3E-AAA5F7A65FEF}
