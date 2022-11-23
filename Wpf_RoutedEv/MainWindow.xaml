@@ -1,0 +1,27 @@
+﻿<Window x:Class="Wpf_RoutedEv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_RoutedEv"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="btnClickMe" Height="75" Margin="42 122 42 122">
+            <StackPanel Orientation="Horizontal">
+                <Label Height="50" FontSize="20" Content="Label Display"/>
+                <Canvas Height="50" Width="100">
+                    <Ellipse Name="outerEllipse" Fill="Green" Height="50" Width="90" Cursor="Hand"/>
+                    <Button Content="Inner Button" Name="InnButton" Height="25" Width="78" Cursor="Hand" Canvas.Left="-223" Canvas.Top="13"/>
+                    <Ellipse Name="innerEllipse" Fill="Yellow" Height="50" Width="82" Canvas.Top="-1" Canvas.Left="110" RenderTransformOrigin="2.765,0.744" Cursor="Hand"/>
+                </Canvas>
+
+            </StackPanel>
+            
+        </Button>
+    </Grid>
+</Window>
