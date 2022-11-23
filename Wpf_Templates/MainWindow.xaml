@@ -7,12 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="I am a button" Height="60" Width="160" Click="Button_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Ellipse Fill="Red"/>
-                </ControlTemplate>
-            </Button.Template>
+        <Button Style="{StaticResource MyStyle1}" Content="I am a button" Height="60" Width="160" Click="Button_Click">
         </Button>
     </Grid>
 </Window>
