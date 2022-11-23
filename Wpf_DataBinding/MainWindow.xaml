@@ -8,6 +8,6 @@
         Title="MainWindow" Height="300" Width="300">
     <StackPanel>
         <Slider Name="mySlider" Minimum="0" Maximum="100" IsSnapToTickEnabled="True"/>
-        <TextBox Name="myTxt" Width="50" Text="{Binding ElementName=mySlider, Path=Value, Mode=TwoWay}"/>
+        <TextBox Name="myTxt" Width="50" Text="{Binding ElementName=mySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </StackPanel>
 </Window>
