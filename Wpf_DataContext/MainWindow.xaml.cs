@@ -23,6 +23,15 @@ namespace Wpf_DataContext
         public MainWindow()
         {
             InitializeComponent();
+
+            var obj = new Person()
+            {
+                FirstName = "John",
+                LastName = "Helen",
+                Age = 25
+            };
+
+            DataContext = obj;
         }
     }
 }

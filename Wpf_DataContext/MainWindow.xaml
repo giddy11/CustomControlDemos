@@ -18,13 +18,13 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="First Name" VerticalAlignment="Center" Margin="4"/>
-        <TextBox Text="" Grid.Column="1" Margin="4"/>
+        <TextBlock Text="First Name"  VerticalAlignment="Center" Margin="4"/>
+        <TextBox Text="{Binding Path=FirstName}" Grid.Column="1" Margin="4"/>
 
         <TextBlock Text="Last Name" Grid.Row="1" VerticalAlignment="Center" Margin="4"/>
-        <TextBox Text="" Grid.Column="1" Margin="4" Grid.Row="1"/>
+        <TextBox Text="{Binding Path=LastName}" Grid.Column="1" Margin="4" Grid.Row="1"/>
 
         <TextBlock Text="Age" Grid.Row="2" VerticalAlignment="Center" Margin="4"/>
-        <TextBox Text="" Grid.Column="1" Grid.Row="2" Margin="4"/>
+        <TextBox Text="{Binding Path=Age}" Grid.Column="1" Grid.Row="2" Margin="4"/>
     </Grid>
 </Window>
