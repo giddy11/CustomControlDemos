@@ -33,17 +33,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trigger", "Trigger", "{E613
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_Trigger_Dp", "Wpf_Trigger_Dp\Wpf_Trigger_Dp.csproj", "{1227B77D-1CFD-4F6C-B9FC-F49AFF4C6850}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routed Event", "Routed Event", "{D30E5FFD-EB8B-4B88-83F4-0BCFEF330A08}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoutedEvent", "RoutedEvent", "{D30E5FFD-EB8B-4B88-83F4-0BCFEF330A08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_RoutedEv", "Wpf_RoutedEv\Wpf_RoutedEv.csproj", "{1A4E803A-E9C2-4236-A7A5-0893E3D491FD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Binding", "Data Binding", "{8DE3894A-3F29-4B2D-AF46-F2E221A7708B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBinding", "DataBinding", "{8DE3894A-3F29-4B2D-AF46-F2E221A7708B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_DataBinding", "Wpf_DataBinding\Wpf_DataBinding.csproj", "{E018C65D-25D2-4B96-A65B-E40D91302C9E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{8B019523-16DB-4B2A-B54D-8231E7EB853C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Templates", "Wpf_Templates\Wpf_Templates.csproj", "{C90D7C62-70CD-4C95-9CBD-8B332A316C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_Templates", "Wpf_Templates\Wpf_Templates.csproj", "{C90D7C62-70CD-4C95-9CBD-8B332A316C05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataContext", "DataContext", "{14F70F3E-9BF7-4B51-8DA1-20780B19EA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_DataContext", "Wpf_DataContext\Wpf_DataContext.csproj", "{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +119,10 @@ Global
 		{C90D7C62-70CD-4C95-9CBD-8B332A316C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90D7C62-70CD-4C95-9CBD-8B332A316C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C90D7C62-70CD-4C95-9CBD-8B332A316C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +133,7 @@ Global
 		{1A4E803A-E9C2-4236-A7A5-0893E3D491FD} = {D30E5FFD-EB8B-4B88-83F4-0BCFEF330A08}
 		{E018C65D-25D2-4B96-A65B-E40D91302C9E} = {8DE3894A-3F29-4B2D-AF46-F2E221A7708B}
 		{C90D7C62-70CD-4C95-9CBD-8B332A316C05} = {8B019523-16DB-4B2A-B54D-8231E7EB853C}
+		{6E69388F-2CD2-4E85-B49A-97DA9CBED66C} = {14F70F3E-9BF7-4B51-8DA1-20780B19EA5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB70DB13-1CD4-4B3C-9A3E-AAA5F7A65FEF}
