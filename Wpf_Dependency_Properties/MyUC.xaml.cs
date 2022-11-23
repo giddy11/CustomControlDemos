@@ -11,8 +11,9 @@ namespace Wpf_Dependency_Properties
         public MyUC()
         {
             InitializeComponent();
+            
         }
-
+        
         public int Awesomeness
         {
             get { return (int)GetValue(AwesomenessProperty); }
