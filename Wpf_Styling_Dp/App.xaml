@@ -4,33 +4,6 @@
              xmlns:local="clr-namespace:Wpf_Styling_Dp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Button" x:Key="MyStyle1">
-            <Setter Property="Background" Value="Teal"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-        </Style>
-
-        <Style TargetType="Button" x:Key="MyStyle2">
-            <Setter Property="Background" Value="Red"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-        </Style>
-
-        <!--Baseon Keyword-->
-        <Style TargetType="Button" x:Key="MyStyle3">
-            <Setter Property="Background" Value="Teal"/>
-            <Setter Property="Foreground" Value="Aqua"/>
-        </Style>
         
-        <!--repetitions-->
-        <!--<Style TargetType="Button" x:Key="MyStyle4">
-            <Setter Property="Background" Value="Teal"/>
-            <Setter Property="Foreground" Value="Aqua"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-        </Style>-->
-        <Style BasedOn="{StaticResource MyStyle3}" TargetType="Button" x:Key="MyStyle4">
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-        </Style>
-        <Style BasedOn="{StaticResource MyStyle4}" TargetType="Button" x:Key="MyStyle5">
-            <Setter Property="BorderBrush" Value="Red"/>
-        </Style>
     </Application.Resources>
 </Application>

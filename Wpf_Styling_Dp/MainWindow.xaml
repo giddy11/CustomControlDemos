@@ -6,6 +6,37 @@
         xmlns:local="clr-namespace:Wpf_Styling_Dp"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="400">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="MyStyle1">
+            <Setter Property="Background" Value="Teal"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="MyStyle2">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+
+        <!--Baseon Keyword-->
+        <Style TargetType="Button" x:Key="MyStyle3">
+            <Setter Property="Background" Value="Teal"/>
+            <Setter Property="Foreground" Value="Aqua"/>
+        </Style>
+
+        <!--repetitions-->
+        <!--<Style TargetType="Button" x:Key="MyStyle4">
+            <Setter Property="Background" Value="Teal"/>
+            <Setter Property="Foreground" Value="Aqua"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>-->
+        <Style BasedOn="{StaticResource MyStyle3}" TargetType="Button" x:Key="MyStyle4">
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+        <Style BasedOn="{StaticResource MyStyle4}" TargetType="Button" x:Key="MyStyle5">
+            <Setter Property="BorderBrush" Value="Red"/>
+        </Style>
+    </Window.Resources>
     
     <Grid>
         <!--The below are explicit ways of styling-->
@@ -15,7 +46,7 @@
         <!--Use of baseOn ie style inheritance-->
         <Button Style="{StaticResource MyStyle3}" Content="Button 3" Margin="116 150 0 0" Width="93" Height="51" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button Style="{StaticResource MyStyle4}" Content="Button 4" Margin="276 150 0 0" Width="93" Height="51" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button Style="{StaticResource MyStyle5}" Content="Button 5" Margin="116 240 0 0" Width="93" Height="51" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource MyStyle5}" Content="Button 5" Margin="116 240 0 0" Width="93" Height="51" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
