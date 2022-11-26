@@ -23,6 +23,32 @@ namespace Practice
         public MainWindow()
         {
             InitializeComponent();
+            Company = new Company { Name = "CypherCrescent Limited", Address = "Trans Amadi, PH" };
+            DataContext = this;
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This is my customised button");
+        }
+
+
+
+        public Company Company { get; set; }
+    }
+
+
+
+
+
+
+
+
+
+
+    public class Company
+    {
+        public string Name { get; set; }
+        public string Address { get; set; }
     }
 }

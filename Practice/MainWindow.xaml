@@ -18,7 +18,7 @@
         <Grid Grid.Row="1">
             <Grid ShowGridLines="True">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="140"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
@@ -60,6 +60,37 @@
 
                     <Button Style="{StaticResource MyTrigger1}" Content="Click me" Margin="10" Width="80" Height="30"/>
                 </StackPanel>
+
+                <TextBlock Grid.Row="3" Text="CONTROL TEMPLATE" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="Click me" Margin="10" Width="80" Height="30"/>
+                    <Button Style="{StaticResource MyTemplate1}" Content="Click me" Margin="10" Width="80" Height="30"/>
+                    <Button Click="button_Click" Style="{StaticResource MyTemplate2}" Content="Click me" Margin="10" Width="80" Height="30"/>
+                </StackPanel>
+
+                <TextBlock Grid.Row="4" Text="DATA TEMPLATE" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <ContentPresenter Grid.Row="4" Grid.Column="1" Content="{Binding Company}">
+                    <ContentPresenter.ContentTemplate>
+                        <DataTemplate>
+                            <Grid Grid.Row="4" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Name Of Company:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding Name}" Grid.Column="1" Margin="5"/>
+
+                                <TextBlock Grid.Row="1" Text="Address Of Company:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding Address}" Grid.Row="1" Grid.Column="1" Margin="5"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ContentPresenter.ContentTemplate>
+                </ContentPresenter>
             </Grid>
         </Grid>
         

@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ResourceDictionaries/DictionaryForStyling.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionaries/DictionaryForTrigger.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/DictionaryForTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
