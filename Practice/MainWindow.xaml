@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="1000">
     <Grid Background="BlanchedAlmond" ShowGridLines="True">
 
         <Grid.RowDefinitions>
@@ -57,6 +57,8 @@
 
                     <Ellipse Style="{StaticResource MyTrigger5}" Width="70" Height="70" Margin="10"/>
                     <TextBox x:Name="txtBox1" Width="50" Height="20" Margin="10"/>
+
+                    <Button Style="{StaticResource MyTrigger1}" Content="Click me" Margin="10" Width="80" Height="30"/>
                 </StackPanel>
             </Grid>
         </Grid>
