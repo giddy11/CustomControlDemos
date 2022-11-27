@@ -24,15 +24,18 @@
             <TextBlock Text="Height" FontSize="16" Grid.Row="1" Margin="50, 5"/>
             <TextBlock Text="Stroke Thickness" FontSize="16" Grid.Row="2" Margin="50, 5"/>
 
-            <TextBox Width="120" Height="25" FontSize="16" Margin="50, 5" Grid.Column="1"/>
-            <TextBox Width="120" Height="25" FontSize="16" Grid.Row="1" Margin="50, 5" Grid.Column="1"/>
-            <TextBox Width="120" Height="25" FontSize="16" Grid.Row="2" Margin="50, 5" Grid.Column="1" VerticalAlignment="Top"/>
+            <TextBox Width="120" Height="25" FontSize="16" Margin="50, 5" Grid.Column="1" Text="{Binding Width}"/>
+            <TextBox Width="120" Height="25" FontSize="16" Grid.Row="1" Margin="50, 5" Grid.Column="1" Text="{Binding Height}"/>
+            <TextBox Width="120" Height="25" FontSize="16" Grid.Row="2" Margin="50, 5" Grid.Column="1" VerticalAlignment="Top" Text="{Binding StrokeThickness}"/>
 
-            <!--<ContentControl Grid.Column="2" Grid.RowSpan="3" VerticalAlignment="Top">
-                <ContentControl.Content>
-                    <local:CustomRectangle x:Name="view" />
-                </ContentControl.Content>
-            </ContentControl>-->
+
+            <ContentPresenter Grid.Column="2" Grid.RowSpan="3" VerticalAlignment="Top">
+                <ContentPresenter.Content>
+                    <local:CustomRectangle x:Name="view"/>
+                </ContentPresenter.Content>
+            </ContentPresenter>
+            
+            <!--<local:CustomRectangle Grid.Column="2" Grid.RowSpan="2" Width="{Binding Width}" Height="{Binding Height}" StrokeThickness="{Binding StrokeThickness}"/>-->
 
         </Grid>
     </Grid>
