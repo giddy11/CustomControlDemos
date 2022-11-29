@@ -9,11 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_Rectangle", "Wpf_Rectan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry_Wpf", "Geometry_Wpf\Geometry_Wpf.csproj", "{0C205FBF-855C-452F-BA61-A17E5CE319CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_CombinedGeometry", "Wpf_CombinedGeometry\Wpf_CombinedGeometry.csproj", "{55D42627-DA3C-4030-86E6-3212790577D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_CombinedGeometry", "Wpf_CombinedGeometry\Wpf_CombinedGeometry.csproj", "{55D42627-DA3C-4030-86E6-3212790577D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_PathGeometry", "Wpf_PathGeometry\Wpf_PathGeometry.csproj", "{8213FC88-3A70-44BC-BB42-0C5C0F247FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_PathGeometry", "Wpf_PathGeometry\Wpf_PathGeometry.csproj", "{8213FC88-3A70-44BC-BB42-0C5C0F247FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_BezianCurve", "Wpf_BezianCurve\Wpf_BezianCurve.csproj", "{1F50B9B6-A3BA-4135-B94D-E05FF7129D3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_BezianCurve", "Wpf_BezianCurve\Wpf_BezianCurve.csproj", "{1F50B9B6-A3BA-4135-B94D-E05FF7129D3C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf_Geometry_MiniLanguage", "Wpf_Geometry_MiniLanguage\Wpf_Geometry_MiniLanguage.csproj", "{B0041181-A922-48E0-AD9E-3376688A0605}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HitTestingExamples", "HitTestingExamples", "{D5C6F27E-D0ED-4642-969E-C10E008D9EE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_HitTesting", "Wpf_HitTesting\Wpf_HitTesting.csproj", "{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +47,21 @@ Global
 		{1F50B9B6-A3BA-4135-B94D-E05FF7129D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F50B9B6-A3BA-4135-B94D-E05FF7129D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F50B9B6-A3BA-4135-B94D-E05FF7129D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0041181-A922-48E0-AD9E-3376688A0605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0041181-A922-48E0-AD9E-3376688A0605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0041181-A922-48E0-AD9E-3376688A0605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0041181-A922-48E0-AD9E-3376688A0605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6944F43C-D317-41A1-871E-C8AAA67FA990} = {FA255970-E6C1-40B9-BEFB-5BA92668CD6A}
+		{F652EF86-F7A6-459F-A4FD-AE85D5ED91CF} = {D5C6F27E-D0ED-4642-969E-C10E008D9EE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB70DB13-1CD4-4B3C-9A3E-AAA5F7A65FEF}
