@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Customer"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="Manual" WindowStyle="None" AllowsTransparency="true" Background="Transparent">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterOwner" WindowStyle="None" AllowsTransparency="true" Background="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
