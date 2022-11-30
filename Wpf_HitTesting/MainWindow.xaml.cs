@@ -23,7 +23,7 @@ namespace Wpf_HitTesting
         {
             foreach (Rectangle rect in canvas1.Children)
             {
-                rect.Fill = Brushes.LightBlue;
+                //rect.Fill = Brushes.LightBlue;
             }
         }
 
