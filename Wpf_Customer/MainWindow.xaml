@@ -13,13 +13,6 @@
             <RowDefinition Height="250"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        <!--<StackPanel Orientation="Horizontal">
-            <Button Style="{StaticResource topButton}" Content="View all"/>
-            <Button Style="{StaticResource topButton}" Content="Your files"/>
-            <Button Style="{StaticResource topButton}" Content="Shared files"/>
-
-            <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" HorizontalAlignment="Right" />
-        </StackPanel>-->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -64,7 +57,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Staus" IsReadOnly="True" Width="*"/>
+                <DataGridTemplateColumn Header="Status" IsReadOnly="True" Width="*"/>
                 <DataGridTemplateColumn Header="Customer" IsReadOnly="True" Width="*"/>
                 <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*"/>
 
@@ -72,7 +65,12 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                
+                                <Button Style="{StaticResource gridEditButton}">
+                                    <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}"/>
+                                </Button>
+                                <Button Style="{StaticResource gridDeleteButton}">
+                                    <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}"/>
+                                </Button>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
