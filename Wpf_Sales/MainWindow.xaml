@@ -25,7 +25,11 @@
             <Button Style="{StaticResource tabButton}" Content="Your files" Grid.Column="1" Margin="0 0 0 0"/>
             <Button Style="{StaticResource tabButton}" Width="90" Content="Shared files" Grid.Column="2" Margin="0 0 0 0"/>
 
-            <!--<Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Grid.Column="4" VerticalAlignment="Center"/>-->
+            <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Grid.Column="4" VerticalAlignment="Center"/>
+
+            <TextBox TextChanged="txtSearch_TextChanged" Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
+
+            <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4" IsHitTestVisible="False" Panel.ZIndex="1" Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
         </Grid>
 
         <DataGrid Grid.Row="1" x:Name="customersDataGrid" ColumnHeaderStyle="{StaticResource dataGridColHeader}" AutoGenerateColumns="False" CanUserAddRows="False">

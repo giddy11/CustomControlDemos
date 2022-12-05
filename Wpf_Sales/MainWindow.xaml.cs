@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Media;
 
 namespace Wpf_Sales
@@ -13,7 +17,7 @@ namespace Wpf_Sales
         public MainWindow()
         {
             InitializeComponent();
-            customersDataGrid.ItemsSource = MainWindow.GetCustomer();
+            customersDataGrid.ItemsSource = GetCustomer();
 
 
         }
@@ -89,6 +93,20 @@ namespace Wpf_Sales
             return list;
         }
 
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var tbx = sender as TextBox;
+            if (tbx.Text != "")
+            {
+                var filteredList = Customer.Customers.Where(x => x.InvoiceTag.Contains(tbx.Text));
+                customersDataGrid.ItemsSource = null;
+                customersDataGrid.ItemsSource = filteredList;
+            }
+            else
+            {
+                customersDataGrid.ItemsSource = Customer.Customers;
+            }
+        }
     }
 
 
@@ -110,6 +128,7 @@ namespace Wpf_Sales
         public string InvoiceTag { get; set; }
         public string Email { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
+        public static List<Customer> Customers { get; set; }
 
     }
 
