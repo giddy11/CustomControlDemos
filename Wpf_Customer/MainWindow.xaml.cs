@@ -30,36 +30,6 @@ namespace Wpf_Customer
             
         }
 
-        //private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    if (e.ChangedButton == MouseButton.Left)
-        //    {
-        //        this.DragMove();
-        //    }
-        //}
-
-        //private bool Ismaximised = false;
-        //private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    if (e.ClickCount == 2)
-        //    {
-        //        if (Ismaximised)
-        //        {
-        //            this.WindowState = WindowState.Normal;
-        //            this.Width = 800;
-        //            this.Height = 450;
-
-        //            Ismaximised = false;
-        //        }
-        //        else
-        //        {
-        //            this.WindowState = WindowState.Maximized;
-
-        //            Ismaximised = true;
-        //        }
-        //    }
-        //}
-
         public class Customer
         {
             public string Name { get; set; }

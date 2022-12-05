@@ -30,7 +30,7 @@
             
             <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4" IsHitTestVisible="False" Panel.ZIndex="1" Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
 
-            <TextBox Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"/>
+            <TextBox Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
         </Grid>
 
         <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="1" x:Name="customersDataGrid">
@@ -47,19 +47,19 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
-                                    <TextBlock Text="..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="white" Margin="0 0 0 1"/>
+                                <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="{Binding BgColor}">
+                                    <TextBlock Text="{Binding Character}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="white" Margin="0 0 0 1"/>
                                 </Border>
 
-                                <TextBlock Text="..." VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Status" IsReadOnly="True" Width="*"/>
-                <DataGridTemplateColumn Header="Customer" IsReadOnly="True" Width="*"/>
-                <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*"/>
+                <DataGridTextColumn Header="Status" IsReadOnly="True" Width="*"/>
+                <DataGridTextColumn Header="Customer" IsReadOnly="True" Width="*"/>
+                <DataGridTextColumn Header="Progress" IsReadOnly="True" Width="*"/>
 
                 <DataGridTemplateColumn Header="Operations" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
@@ -68,7 +68,7 @@
                                 <Button Style="{StaticResource gridEditButton}">
                                     <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}"/>
                                 </Button>
-                                <Button Style="{StaticResource gridDeleteButton}">
+                                <Button Style="{StaticResource gridDeleteButton}" Margin="5 0 0 0">
                                     <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}"/>
                                 </Button>
                             </StackPanel>
