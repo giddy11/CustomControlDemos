@@ -8,6 +8,8 @@
 
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
 
+        <BitmapImage x:Key="image1" UriSource="Images\download.jpg"></BitmapImage>
+
 
         <Style TargetType="Button" x:Key="tabButton">
             <Setter Property="Background" Value="Transparent"/>

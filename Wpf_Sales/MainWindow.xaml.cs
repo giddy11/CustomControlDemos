@@ -98,7 +98,7 @@ namespace Wpf_Sales
             var tbx = sender as TextBox;
             if (tbx.Text != "")
             {
-                var filteredList = Customer.Customers.Where(x => x.InvoiceTag.Contains(tbx.Text));
+                var filteredList = Customer.Customers.Where(x => x.Name.Contains(tbx.Text));
                 customersDataGrid.ItemsSource = null;
                 customersDataGrid.ItemsSource = filteredList;
             }
@@ -129,6 +129,7 @@ namespace Wpf_Sales
         public string Email { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
         public static List<Customer> Customers { get; set; }
+        public ImageSource Image { get; set; }
 
     }
 
