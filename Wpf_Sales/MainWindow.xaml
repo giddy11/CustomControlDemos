@@ -3,11 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Wpf_Sales" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:valueconverter="clr-namespace:Wpf_Sales.ValueConverter"
+        xmlns:local="clr-namespace:Wpf_Sales" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -29,7 +27,7 @@
 
             <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Grid.Column="4" VerticalAlignment="Center"/>
 
-            <TextBox  Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
+            <TextBox TextChanged="txtSearch_TextChanged" Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
 
             <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4" IsHitTestVisible="False" Panel.ZIndex="1" Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
         </Grid>
@@ -55,7 +53,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Path Data="{Binding PaymentStatus}"/>
+                                <Icon:PackIconMaterial Kind="MarkerCheck"/>
                                 <TextBlock Text="{Binding PaymentStatus}"/>
                             </StackPanel>
                         </DataTemplate>

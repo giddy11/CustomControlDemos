@@ -1,5 +1,9 @@
-﻿using System.Windows;
-using Wpf_Sales.Database;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Wpf_Sales
 {
@@ -11,7 +15,93 @@ namespace Wpf_Sales
         public MainWindow()
         {
             InitializeComponent();
-            customersDataGrid.ItemsSource = CustomerDb.GetCustomer();
+            customersDataGrid.ItemsSource = GetCustomer();
+        }
+
+        private static ObservableCollection<Customer> GetCustomer()
+        {
+            var converter = new BrushConverter();
+            var list = new ObservableCollection<Customer>();
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            list.Add(new Customer()
+            {
+                Name = "Olivia Rhye",
+                Email = "olivia@untitledui.com",
+                InvoiceTag = "INV-3066",
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
+            });
+
+            return list;
         }
 
         //private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
@@ -29,4 +119,37 @@ namespace Wpf_Sales
         //    }
         //}
     }
+
+
+    //var cust = new Customer();
+    //cust.Add(new Customer()
+    //{
+    //    Name = "Olivia Rhye",
+    //        Character = "OR",
+    //        Email = "olivia@untitledui.com",
+    //        InvoiceTag = "INV-3066",
+    //    });
+
+    //    customersDataGrid.Items.Add(cust);
+
+
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string InvoiceTag { get; set; }
+        public string Email { get; set; }
+        public PaymentStatus PaymentStatus { get; set; }
+        public static Customer Customers { get; set; }
+        public double Progress { get; set; }
+
+
+    }
+
+    public enum PaymentStatus
+    {
+        Paid,
+        Cancel,
+        Refunded
+    }
+
 }
