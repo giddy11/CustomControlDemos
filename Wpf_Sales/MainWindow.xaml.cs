@@ -27,7 +27,8 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
             });
 
             list.Add(new Customer()
@@ -35,7 +36,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -43,7 +46,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -51,7 +56,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -59,7 +66,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -67,7 +76,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -75,7 +86,9 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             list.Add(new Customer()
@@ -83,26 +96,28 @@ namespace Wpf_Sales
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
-                PaymentStatus = PaymentStatus.Paid
+                PaymentStatus = PaymentStatus.Paid,
+                Progress = 73
+
             });
 
             return list;
         }
 
-        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var tbx = sender as TextBox;
-            if (tbx.Text != "")
-            {
-                var filteredList = Customer.Customers.Where(x => x.Name.Contains(tbx.Text));
-                customersDataGrid.ItemsSource = null;
-                customersDataGrid.ItemsSource = filteredList;
-            }
-            else
-            {
-                customersDataGrid.ItemsSource = Customer.Customers;
-            }
-        }
+        //private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    var tbx = sender as TextBox;
+        //    if (tbx.Text != "")
+        //    {
+        //        var filteredList = Customer.Customers.Where(x => x.Name.Contains(tbx.Text));
+        //        customersDataGrid.ItemsSource = null;
+        //        customersDataGrid.ItemsSource = filteredList;
+        //    }
+        //    else
+        //    {
+        //        customersDataGrid.ItemsSource = Customer.Customers;
+        //    }
+        //}
     }
 
 
@@ -124,8 +139,9 @@ namespace Wpf_Sales
         public string InvoiceTag { get; set; }
         public string Email { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
-        public static List<Customer> Customers { get; set; }
-        public ImageSource Image { get; set; }
+        public static Customer Customers { get; set; }
+        public double Progress { get; set; }
+
 
     }
 

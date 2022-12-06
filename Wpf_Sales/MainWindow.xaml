@@ -74,8 +74,8 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
 
-                                <!--<TextBlock Grid.RowSpan="1" Text="{Binding Name}"/>-->
-                                <Image Source="{StaticResource image1}"/>
+                                <TextBlock Grid.RowSpan="1" Text="{Binding Name}"/>
+                                <!--<Image Source="{StaticResource image1}"/>-->
                                 <TextBlock Grid.Column="2" Text="{Binding Email}"/>
                                 <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Email}"/>
                             </Grid>
