@@ -66,6 +66,7 @@
                 </DataGridTemplateColumn>
 
 
+                <!--CUSTOMER-->
                 <DataGridTemplateColumn Header="Customer" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -75,26 +76,25 @@
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/> 
+                                    <ColumnDefinition Width="60"/> 
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
 
-                                <!--<TextBlock Grid.RowSpan="1" Text="{Binding Name}"/>-->
                                 <Image HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                <TextBlock Grid.Column="2" Text="{Binding Email}"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Name}"/>
                                 <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Email}"/>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-
+                <!--PROGRESS-->
                 <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                                 <ProgressBar Foreground="MediumPurple" Value="{Binding Progress}" Minimum="0" Maximum="100" Width="100" Height="10"/>
-                                <TextBlock Text="{Binding Progress, Converter={StaticResource valToPer}}" VerticalAlignment="Center"/>
+                                <TextBlock Margin="15 0 0 0" Text="{Binding Progress, Converter={StaticResource valToPer}}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
