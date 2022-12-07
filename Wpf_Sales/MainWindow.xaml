@@ -32,23 +32,28 @@
             <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4" IsHitTestVisible="False" Panel.ZIndex="1" Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
         </Grid>
 
-        <DataGrid Grid.Row="1" x:Name="customersDataGrid" ColumnHeaderStyle="{StaticResource dataGridColHeader}" AutoGenerateColumns="False" CanUserAddRows="False">
+        <DataGrid Grid.Row="1" x:Name="customersDataGrid" ColumnHeaderStyle="{StaticResource dataGridColHeader}" Style="{StaticResource dataGridStyle}">
             
-            <!--Column Header Text & Bindings-->
+            <!--CHECKBOX-->
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                <DataGridCheckBoxColumn CanUserResize="false" >
                     <DataGridCheckBoxColumn.HeaderTemplate>
                         <DataTemplate>
-                            <CheckBox/>
+                            <CheckBox Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </DataTemplate>
                     </DataGridCheckBoxColumn.HeaderTemplate>
                 </DataGridCheckBoxColumn>
-                
- 
-                <DataGridTextColumn Header="Invoice" Binding="{Binding Path=InvoiceTag}" IsReadOnly="True" Width="*">
-                    
-                </DataGridTextColumn>
 
+                <!--INVOICE-->
+                <DataGridTemplateColumn Header="Invoice" IsReadOnly="True" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock FontWeight="Bold" Text="{Binding InvoiceTag}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <!--STATUS-->
                 <DataGridTemplateColumn Header="Status" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

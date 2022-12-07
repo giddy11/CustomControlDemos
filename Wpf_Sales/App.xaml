@@ -18,7 +18,6 @@
             <!--<Setter Property="FocusVisualStyle" Value="{x:Null}"/>-->
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="70"/>
-            <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Template">
@@ -119,10 +118,21 @@
         </Style>
 
         <Style TargetType="DataGridColumnHeader" x:Key="dataGridColHeader">
-            <Setter Property="Background" Value="Turquoise"/>
-            <Setter Property="FontWeight"  Value="SemiBold"/>
-            <Setter Property="BorderThickness" Value="0 0 1 2"/>
+            <Setter Property="FontWeight"  Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0 0 0 0"/>
             <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
+
+        </Style>
+
+        <Style TargetType="DataGrid" x:Key="dataGridStyle">
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="GridLinesVisibility" Value="All"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="SelectionMode" Value="Extended"/>
+            <Setter Property="SelectionUnit" Value="CellOrRowHeader"/>
+
         </Style>
     </Application.Resources>
 </Application>
