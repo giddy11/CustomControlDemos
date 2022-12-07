@@ -80,8 +80,12 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                <TextBlock Grid.Column="2" Text="{Binding Name}"/>
+                                <Ellipse Height="20" Width="20">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Id,Converter={StaticResource customerImageVc}}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBlock FontWeight="Bold" Grid.Column="2" Text="{Binding Name}"/>
                                 <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Email}"/>
                             </Grid>
                         </DataTemplate>
@@ -93,7 +97,18 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                                <ProgressBar Foreground="MediumPurple" Value="{Binding Progress}" Minimum="0" Maximum="100" Width="100" Height="10"/>
+                                <ProgressBar Style="{StaticResource pg}"></ProgressBar>
+                                <!--<Border Width="100" Height="10" BorderBrush="Green" BorderThickness="1" CornerRadius="6" Background="MediumPurple">
+                                    
+                                </Border>-->
+
+                                <!--<Ellipse Height="20" Width="20"  >
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Customer.Id, Converter={StaticResource customerImageCv}}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>-->
+
+
                                 <TextBlock Margin="15 0 0 0" Text="{Binding Progress, Converter={StaticResource valToPer}}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </DataTemplate>
@@ -104,3 +119,4 @@
         </DataGrid>
     </Grid>
 </Window>
+<!--<ProgressBar Minimum="0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >-->

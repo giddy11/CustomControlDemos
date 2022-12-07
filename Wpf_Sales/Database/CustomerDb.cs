@@ -10,15 +10,17 @@ namespace Wpf_Sales.Database
             var list = new ObservableCollection<Customer>();
             list.Add(new Customer()
             {
+                Id = 1,
                 Name = "Olivia Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
                 PaymentStatus = PaymentStatus.Paid,
                 Progress = 60
-            });
+            }) ;
 
             list.Add(new Customer()
             {
+                Id = 2,
                 Name = "Phoenix Baker",
                 Email = "phoenix@untitledui.com",
                 InvoiceTag = "INV-3065",
@@ -29,6 +31,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 3,
                 Name = "Lana Steiner",
                 Email = "lana@untitledui.com",
                 InvoiceTag = "INV-3064",
@@ -39,6 +42,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 4,
                 Name = "Demi Wilkinson",
                 Email = "demi@untitledui.com",
                 InvoiceTag = "INV-3063",
@@ -49,6 +53,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 5,
                 Name = "Candice Wu",
                 Email = "candice@untitledui.com",
                 InvoiceTag = "INV-3062",
@@ -59,6 +64,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 6,
                 Name = "Natali Craig",
                 Email = "natali@untitledui.com",
                 InvoiceTag = "INV-3061",
@@ -69,6 +75,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 7,
                 Name = "Drew Cano",
                 Email = "drew@untitledui.com",
                 InvoiceTag = "INV-3060",
@@ -79,6 +86,7 @@ namespace Wpf_Sales.Database
 
             list.Add(new Customer()
             {
+                Id = 8,
                 Name = "Orlando Diggs",
                 Email = "orlando@untitledui.com",
                 InvoiceTag = "INV-3066",

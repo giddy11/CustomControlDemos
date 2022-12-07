@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using Wpf_Sales.Database;
 
 namespace Wpf_Sales
@@ -12,23 +13,30 @@ namespace Wpf_Sales
         {
             InitializeComponent();
             customersDataGrid.ItemsSource = CustomerDb.GetCustomer();
-        }
 
-        //private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    var tbx = sender as TextBox;
-        //    if (tbx.Text != "")
-        //    {
-        //        var filteredList = Customer.Customers.Where(x => x.Name.Contains(tbx.Text));
-        //        customersDataGrid.ItemsSource = null;
-        //        customersDataGrid.ItemsSource = filteredList;
-        //    }
-        //    else
-        //    {
-        //        customersDataGrid.ItemsSource = Customer.Customers;
-        //    }
-        //}
+
+            
+        }
     }
+
+
+    //<!--<ProgressBar Minimum = "0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //var cust = new Customer();
@@ -41,4 +49,19 @@ namespace Wpf_Sales
     //    });
 
     //    customersDataGrid.Items.Add(cust);
+
+    //private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+    //{
+    //    var tbx = sender as TextBox;
+    //    if (tbx.Text != "")
+    //    {
+    //        var filteredList = Customer.Customers.Where(x => x.Name.Contains(tbx.Text));
+    //        customersDataGrid.ItemsSource = null;
+    //        customersDataGrid.ItemsSource = filteredList;
+    //    }
+    //    else
+    //    {
+    //        customersDataGrid.ItemsSource = Customer.Customers;
+    //    }
+    //}
 }

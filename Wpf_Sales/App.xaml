@@ -11,6 +11,7 @@
         <valueconverter:CustomerPaymentStatus x:Key="customerPaymentStatus"/>
         <valueconverter:ValueToColour x:Key="valueToColor"/>
         <valueconverter:ValueToPercentage x:Key="valToPer"/>
+        <valueconverter:CustomerImageVC x:Key="customerImageVc"/>
 
         <Style TargetType="Button" x:Key="tabButton">
             <Setter Property="Background" Value="Transparent"/>
@@ -32,6 +33,38 @@
                                 <Setter Property="Foreground" Value="#784ff2"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--<Style TargetType="ProgressBar" x:Key="pg">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Border Background="White" CornerRadius="2">
+                            --><!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>--><!--
+                            <ProgressBar Minimum="0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >
+                                
+                            </ProgressBar>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+
+        <Style TargetType="ProgressBar" x:Key="pg">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Border Background="White" CornerRadius="2">
+                            <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+                            <ProgressBar Minimum="0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >
+
+                            </ProgressBar>
+                        </Border>
+
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
