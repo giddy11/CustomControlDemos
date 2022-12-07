@@ -15,7 +15,7 @@ namespace Wpf_Sales.Models
         public string Email { get; set; }
         public string Initial => $"{GetInitial(FirstName)}{GetInitial(LastName)}";
         public PaymentStatus PaymentStatus { get; set; }
-        public static Customer Customers { get; set; }
+        //public static Customer Customers { get; set; }
         public double Progress { get; set; }
 
 
