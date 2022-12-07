@@ -27,9 +27,9 @@
 
             <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" Grid.Column="4" VerticalAlignment="Center"/>
 
-            <TextBox  Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
+            <TextBox MouseEnter="txtSearch_MouseEnter" MouseLeave="txtSearch_MouseLeave"  Grid.Column="4" Margin="15 0 0 0" x:Name="txtSearch" Style="{StaticResource textboxSearch}"></TextBox>
 
-            <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4" IsHitTestVisible="False" Panel.ZIndex="1" Visibility="{Binding ElementName=txtSearch,Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
+            <TextBlock x:Name="txtBSearch" Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" Text="Search" Grid.Column="4"/>
         </Grid>
 
         <DataGrid Grid.Row="1" x:Name="customersDataGrid" ColumnHeaderStyle="{StaticResource dataGridColHeader}" Style="{StaticResource dataGridStyle}">
@@ -85,13 +85,18 @@
                                         <ImageBrush ImageSource="{Binding Id,Converter={StaticResource customerImageVc}}"/>
                                     </Ellipse.Fill>
                                 </Ellipse>
-                                <TextBlock FontWeight="Bold" Grid.Column="2" Text="{Binding Name}"/>
+                                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="{Binding FirstName}"/>
+                                    <TextBlock Margin="5 0 0 0" FontWeight="Bold" Text="{Binding LastName}"/>
+                                </StackPanel>
                                 <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Email}"/>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
+                
+                
                 <!--PROGRESS-->
                 <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -101,13 +106,6 @@
                                 <!--<Border Width="100" Height="10" BorderBrush="Green" BorderThickness="1" CornerRadius="6" Background="MediumPurple">
                                     
                                 </Border>-->
-
-                                <!--<Ellipse Height="20" Width="20"  >
-                                    <Ellipse.Fill>
-                                        <ImageBrush ImageSource="{Binding Customer.Id, Converter={StaticResource customerImageCv}}"/>
-                                    </Ellipse.Fill>
-                                </Ellipse>-->
-
 
                                 <TextBlock Margin="15 0 0 0" Text="{Binding Progress, Converter={StaticResource valToPer}}" VerticalAlignment="Center"/>
                             </StackPanel>

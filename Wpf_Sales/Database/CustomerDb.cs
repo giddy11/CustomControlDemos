@@ -11,7 +11,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 1,
-                Name = "Olivia Rhye",
+                FirstName = "Olivia",
+                LastName = "Rhye",
                 Email = "olivia@untitledui.com",
                 InvoiceTag = "INV-3066",
                 PaymentStatus = PaymentStatus.Paid,
@@ -21,7 +22,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 2,
-                Name = "Phoenix Baker",
+                FirstName = "Phoenix",
+                LastName = "Baker",
                 Email = "phoenix@untitledui.com",
                 InvoiceTag = "INV-3065",
                 PaymentStatus = PaymentStatus.Paid,
@@ -32,7 +34,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 3,
-                Name = "Lana Steiner",
+                FirstName = "Lana",
+                LastName = "Steiner",
                 Email = "lana@untitledui.com",
                 InvoiceTag = "INV-3064",
                 PaymentStatus = PaymentStatus.Paid,
@@ -43,7 +46,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 4,
-                Name = "Demi Wilkinson",
+                FirstName = "Demi",
+                LastName = "Wilkinson",
                 Email = "demi@untitledui.com",
                 InvoiceTag = "INV-3063",
                 PaymentStatus = PaymentStatus.Paid,
@@ -54,7 +58,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 5,
-                Name = "Candice Wu",
+                FirstName = "Candice",
+                LastName = "Wu",
                 Email = "candice@untitledui.com",
                 InvoiceTag = "INV-3062",
                 PaymentStatus = PaymentStatus.Refunded,
@@ -65,7 +70,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 6,
-                Name = "Natali Craig",
+                FirstName = "Natali",
+                LastName = "Craig",
                 Email = "natali@untitledui.com",
                 InvoiceTag = "INV-3061",
                 PaymentStatus = PaymentStatus.Paid,
@@ -76,7 +82,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 7,
-                Name = "Drew Cano",
+                FirstName = "Drew",
+                LastName = "Cano",
                 Email = "drew@untitledui.com",
                 InvoiceTag = "INV-3060",
                 PaymentStatus = PaymentStatus.Cancel,
@@ -87,7 +94,8 @@ namespace Wpf_Sales.Database
             list.Add(new Customer()
             {
                 Id = 8,
-                Name = "Orlando Diggs",
+                FirstName = "Orlando",
+                LastName = "Diggs",
                 Email = "orlando@untitledui.com",
                 InvoiceTag = "INV-3066",
                 PaymentStatus = PaymentStatus.Cancel,

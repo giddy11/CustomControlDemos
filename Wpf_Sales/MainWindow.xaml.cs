@@ -17,6 +17,19 @@ namespace Wpf_Sales
 
             
         }
+
+        private void txtSearch_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            txtBSearch.Visibility=Visibility.Collapsed; txtSearch.Focus();
+        }
+
+        private void txtSearch_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (txtSearch.Text.Trim() ==string.Empty)
+            {
+                txtBSearch.Visibility = Visibility.Visible;
+            }
+        }
     }
 
 
