@@ -17,7 +17,7 @@ namespace Wpf_Sales.Database
                 InvoiceTag = "INV-3066",
                 PaymentStatus = PaymentStatus.Paid,
                 Progress = 60
-            }) ;
+            });
 
             list.Add(new Customer()
             {
