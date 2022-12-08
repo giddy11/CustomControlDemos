@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using Wpf_Sales.Database;
 
 namespace Wpf_Sales
@@ -18,16 +19,33 @@ namespace Wpf_Sales
             
         }
 
-        private void txtSearch_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        //private void txtSearch_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        //{
+        //    txtBSearch.Visibility=Visibility.Collapsed; txtSearch.Focus();
+        //}
+
+        //private void txtSearch_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        //{
+        //    if (txtSearch.Text.Trim() ==string.Empty)
+        //    {
+        //        txtBSearch.Visibility = Visibility.Visible;
+        //    }
+        //}
+
+        private void txtBlockSearch_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            txtBSearch.Visibility=Visibility.Collapsed; txtSearch.Focus();
+            txtBlockSearch.Focus();
         }
 
-        private void txtSearch_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
-        {
-            if (txtSearch.Text.Trim() ==string.Empty)
+        private void txtBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+      {
+            if (!string.IsNullOrEmpty(txtBlockSearch.Text) && txtBlockSearch.Text.Length > 0)
             {
-                txtBSearch.Visibility = Visibility.Visible;
+                txtBlockSearch.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                txtBlockSearch.Visibility = Visibility.Visible;
             }
         }
     }

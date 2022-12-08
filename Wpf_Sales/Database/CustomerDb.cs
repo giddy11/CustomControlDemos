@@ -10,7 +10,7 @@ namespace Wpf_Sales.Database
             var list = new ObservableCollection<Customer>();
             list.Add(new Customer()
             {
-                Id = 11,
+                Id = 1,
                 FirstName = "Olivia",
                 LastName = "Rhye",
                 Email = "olivia@untitledui.com",
