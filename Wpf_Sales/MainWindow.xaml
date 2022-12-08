@@ -82,7 +82,7 @@
 
                                 <Grid Grid.RowSpan="2">
                                     <TextBlock x:Name="txtInt" Text="{Binding Initial}" Height="30" Width="30" />
-                                    <Ellipse Height="40" Width="40" Visibility="Visible">
+                                    <Ellipse Height="40" Width="40">
                                         <Ellipse.Fill>
                                             <ImageBrush ImageSource="{Binding Id,Converter={StaticResource customerImageVc}}"/>
                                         </Ellipse.Fill>

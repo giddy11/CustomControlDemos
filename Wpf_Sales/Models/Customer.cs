@@ -1,7 +1,13 @@
-﻿namespace Wpf_Sales.Models
+﻿using System.IO;
+
+namespace Wpf_Sales.Models
 {
     public class Customer
-    {
+    { 
+        public Customer()
+        {
+            
+        }
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
