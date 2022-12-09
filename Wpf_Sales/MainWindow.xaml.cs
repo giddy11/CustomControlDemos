@@ -19,37 +19,6 @@ namespace Wpf_Sales
             
         }
 
-        //private void txtSearch_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
-        //{
-        //    txtBSearch.Visibility=Visibility.Collapsed; txtSearch.Focus();
-        //}
-
-        //private void txtSearch_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
-        //{
-        //    if (txtSearch.Text.Trim() ==string.Empty)
-        //    {
-        //        txtBSearch.Visibility = Visibility.Visible;
-        //    }
-        //}
-
-        //  private void txtBlockSearch_MouseDown(object sender, MouseButtonEventArgs e)
-        //  {
-        //      txtBlockSearch.Focus();
-        //  }
-
-        //  private void txtBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //      if (!string.IsNullOrEmpty(txtBlockSearch.Text) && txtBlockSearch.Text.Length > 0)
-        //      {
-        //          txtBlockSearch.Visibility = Visibility.Collapsed;
-        //      }
-        //      else
-        //      {
-        //          txtBlockSearch.Visibility = Visibility.Visible;
-        //      }
-        //  }
-
-
         private void txtBlockSearch_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (txtBlockSearch != null)
@@ -72,7 +41,6 @@ namespace Wpf_Sales
     }
 
 
-    //<!--<ProgressBar Minimum = "0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >-->
 
 
 
