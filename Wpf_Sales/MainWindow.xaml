@@ -115,11 +115,11 @@
 
 
                 <!--PROGRESS-->
-                <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*">
+                <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                                <Border BorderThickness="1" BorderBrush="#acb0af" Width="100" Height="10" CornerRadius="5">
+                                <Border BorderThickness="1" BorderBrush="#acb0af" Width="100" Height="10" CornerRadius="5" ClipToBounds="True">
                                     <ProgressBar Style="{StaticResource pg}"></ProgressBar>
                                 </Border>
                                 
