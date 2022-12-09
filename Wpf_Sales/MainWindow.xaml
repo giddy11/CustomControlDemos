@@ -46,7 +46,7 @@
         </Grid>
 
         <DataGrid Grid.Row="1" x:Name="customersDataGrid" ColumnHeaderStyle="{StaticResource dataGridColHeader}" Style="{StaticResource dataGridStyle}">
-            
+
             <!--CHECKBOX-->
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn CanUserResize="false" >
@@ -65,7 +65,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
+
                 <!--STATUS-->
                 <DataGridTemplateColumn Header="Status" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -89,7 +89,7 @@
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/> 
+                                    <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="auto"/>
                                 </Grid.ColumnDefinitions>
 
@@ -101,7 +101,7 @@
                                         </Ellipse.Fill>
                                     </Ellipse>
                                 </Grid>
-                                
+
                                 <StackPanel Grid.Column="2" Orientation="Horizontal">
                                     <TextBlock FontWeight="Bold" Text="{Binding FirstName}"/>
                                     <TextBlock Margin="5 0 0 0" FontWeight="Bold" Text="{Binding LastName}"/>
@@ -112,17 +112,14 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                
-                
+
+
                 <!--PROGRESS-->
                 <DataGridTemplateColumn Header="Progress" IsReadOnly="True" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                                 <ProgressBar Style="{StaticResource pg}"></ProgressBar>
-                                <!--<Border Width="100" Height="10" BorderBrush="Green" BorderThickness="1" CornerRadius="6" Background="MediumPurple">
-                                    
-                                </Border>-->
 
                                 <TextBlock Margin="15 0 0 0" Text="{Binding Progress, Converter={StaticResource valToPer}}" VerticalAlignment="Center"/>
                             </StackPanel>
@@ -134,4 +131,3 @@
         </DataGrid>
     </Grid>
 </Window>
-<!--<ProgressBar Minimum="0" Maximum="100" Width="100" Height="10" Foreground="MediumPurple" Value="{Binding Progress}" >-->

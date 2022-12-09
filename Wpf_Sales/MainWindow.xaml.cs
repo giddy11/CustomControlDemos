@@ -32,14 +32,35 @@ namespace Wpf_Sales
         //    }
         //}
 
+        //  private void txtBlockSearch_MouseDown(object sender, MouseButtonEventArgs e)
+        //  {
+        //      txtBlockSearch.Focus();
+        //  }
+
+        //  private void txtBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //      if (!string.IsNullOrEmpty(txtBlockSearch.Text) && txtBlockSearch.Text.Length > 0)
+        //      {
+        //          txtBlockSearch.Visibility = Visibility.Collapsed;
+        //      }
+        //      else
+        //      {
+        //          txtBlockSearch.Visibility = Visibility.Visible;
+        //      }
+        //  }
+
+
         private void txtBlockSearch_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            txtBlockSearch.Focus();
+            if (txtBlockSearch != null)
+            {
+                txtBlockSearch.Focus();
+            }
         }
 
         private void txtBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
-      {
-            if (!string.IsNullOrEmpty(txtBlockSearch.Text) && txtBlockSearch.Text.Length > 0)
+        {
+            if (txtBlockSearch != null && !string.IsNullOrEmpty(((TextBox)sender).Text) && ((TextBox)sender).Text.Length > 0)
             {
                 txtBlockSearch.Visibility = Visibility.Collapsed;
             }

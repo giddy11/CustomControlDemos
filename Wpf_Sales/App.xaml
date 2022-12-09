@@ -6,7 +6,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
-        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <!--<BooleanToVisibilityConverter x:Key="BoolToVis"/>-->
 
         <valueconverter:CustomerPaymentStatus x:Key="customerPaymentStatus"/>
         <valueconverter:ValueToColour x:Key="valueToColor"/>
@@ -121,35 +121,6 @@
             </Setter>
         </Style>-->
         
-        
-        <Style x:Key="textboxSearch" TargetType="TextBox">
-            <Setter Property="Background" Value="#ffffff"/>
-            <Setter Property="Foreground" Value="#b0b9c6"/>
-            <!--<Setter Property="BorderThickness" Value="0"/>-->
-            <!--<Setter Property="FontSize" Value="12"/>-->
-            <Setter Property="Padding" Value="15 10"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <!--<Setter Property="Margin" Value="0 10"/>-->
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TextBox">
-                        <Border  CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}">
-                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden"/>
-                        </Border>
-
-                        <!--<ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" Value="#d9d9d9" />
-                            </Trigger>
-
-                            <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter Property="BorderBrush" Value="#d9d9d9"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>-->
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
         <Style x:Key="txtBlockSearch1" TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"/>
@@ -161,7 +132,7 @@
         </Style>
 
         <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="Grid.Column" Value="1"/>
             <Setter Property="Margin" Value="70 0 0 0"/>
             <Setter Property="Foreground" Value="#878787"/>
