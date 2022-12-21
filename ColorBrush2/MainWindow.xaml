@@ -52,5 +52,11 @@
                 </Button>
             </ToolBar>
         </ToolBarTray>
+
+        <Border BorderThickness="2" BorderBrush="LightBlue" Margin="5">
+            <Canvas Name="canvas1" Background="Transparent" MouseLeftButtonDown="canvas1_MouseLeftButtonDown" MouseMove="canvas1_MouseMove" MouseLeftButtonUp="canvas1_MouseLeftButtonUp"
+                    >
+            </Canvas>
+        </Border>
     </DockPanel>
 </Window>
