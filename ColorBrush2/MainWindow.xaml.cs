@@ -36,7 +36,7 @@ namespace ColorBrush2
             //{
             //    if (selectedShape != null)
             //    {
-            //        if (selectedShape.StrokeThickness == selectedStrokeThickness)
+            //        if (selectedShape.StrokeThickness == selectedStrokeThickness) 
             //        {
             //            selectedShape.Fill =
             //            new SolidColorBrush(cPicker.SelectedColor);
