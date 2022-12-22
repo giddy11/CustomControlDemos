@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Events1
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void outerButton_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            label.Content = label.Content + "Outer Button; ";
+        }
+
+        private void innerButton_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            label.Content = label.Content + "Inner Button; ";
+        }
+
+        //private void btn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Welcome to WPF Application");
+        //}
+
+        //private void btn_MouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    btn.Content = "Mouse Entered";
+        //}
+
+        //private void outerButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("Outer Button Clicked");
+        //}
+
+        //private void innerButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Title = "Changed Title";
+
+        //}
+
+
+    }
+}
